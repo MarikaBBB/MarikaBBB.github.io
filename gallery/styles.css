@@ -68,3 +68,14 @@
     max-width: 600px;
   }
 
+  @media screen and (max-width: 768px) {
+    .container {
+      justify-content: space-between;
+      display: flex;
+    }
+  }
+
+  .card-image {
+    flex-basis: calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
