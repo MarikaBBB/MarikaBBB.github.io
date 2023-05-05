@@ -6,6 +6,7 @@
   body {
     font-family: Arial;
     margin: 0;
+    padding: 0;
   }
 
   #header {
@@ -34,6 +35,7 @@
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border: black;
+    overflow: hidden;
   }
   
   .card-image img {
@@ -68,10 +70,22 @@
     max-width: 600px;
   }
 
-  @media screen and (max-width: 600px) {
-    .card {
-      width: 100%;
+  .toggle-description {
+    margin-bottom: 10px;
+    shape-margin: 0vh;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  
+  @media screen and (min-width: 768px) {
+    .container{
+      justify-content: space-between;
     }
+    
   }
 
   
