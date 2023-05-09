@@ -2,11 +2,48 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Page Title</title>
-</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>The Movie Database</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="This is a movie database landing page project">
+  </head>
+
+
+  <body>
+    <header>
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-collapse" id="head-navbar">
+      <ul class=" nav navbar-nav">
+        <h1>The Movie Database</h1>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Movie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Log in</a>
+        </li>
+      </ul>
+    </header>
+      <section class="showcase">
+      <div class="search">
+        <form class="searchBut" action="action_page.php">
+          <input type="text" placeholder="Search..." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      </section>
+    </div>
+  </body>
+    
 <body>
-  <script>
-    console.log("Movie Data")
+ <script src="script.js"></script>
   </script>
 </body>
 </html>
