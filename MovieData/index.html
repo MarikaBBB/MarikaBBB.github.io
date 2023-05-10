@@ -12,38 +12,74 @@
 
   <body>
     <header>
-    <div class="navbar navbar-inverse navbar-fixed-top navbar-collapse" id="head-navbar">
-      <ul class=" nav navbar-nav">
-        <h1>The Movie Database</h1>
+      <div class="navbar navbar-inverse navbar-fixed-top navbar-collapse" id="head-navbar">
+        <ul class=" nav navbar-nav">
+          <h1>The Movie Database</h1>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Movie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log in</a>
+          </li>
         </ul>
-        <ul class="nav navbar-nav pull-right">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Movie</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Log in</a>
-        </li>
-      </ul>
-    </header>
+      </header>
+      
       <section class="showcase">
-      <div class="search">
-        <form class="searchBut" action="action_page.php">
-          <input type="text" placeholder="Search..." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-      </section>
+    <div class="movie-list">
+      <form>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title"><br>
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year"><br>
+        <label for="runtime">Runtime:</label>
+        <input type="number" id="runtime" name="runtime"><br>
+        <label for="rating">Rating:</label>
+        <input type="number" step="0.1" id="rating" name="rating"><br>
+        <label for="plot">Plot:</label>
+        <textarea id="plot" name="plot"></textarea><br>
+        <label for="cast">Cast:</label>
+        <textarea id="cast" name="cast"></textarea><br>
+        <input type="submit" value="Add Movie">
+      </form>
     </div>
+  </section>
+  <footer>
+    <div class="footer-section">
+      <h3>THE MD</h3>
+      <ul>
+        <li>Contact Us</li>
+        <li>Support Forums</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>GET INVOLVED</h3>
+      <ul>
+        <li>Contribution Bible</li>
+        <li>Add New Movie</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>COMMUNITY</h3>
+      <ul>
+        <li>Guidelines</li>
+        <li>Discussions</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>LEGAL</h3>
+      <ul>
+        <li>Terms of Use</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+  </footer>
   </body>
-    
-<body>
- <script src="script.js"></script>
-  </script>
-</body>
 </html>

@@ -1,127 +1,164 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    background: rgb(44, 41, 41);
-    color: #999;
-    
+  font-family: 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color:#1f232d;
+  color: #999;
+  
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 h1 {
-    color: white;
+  color: white;
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 p {
-    margin: 0-5rem 0;
+  margin: 0-5rem 0;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 /* Style the header */ 
 header {
-    background-color:#0d2870;
-    color: white;
-    display: flex;
-    justify-content: stretch;
-    align-items: center;
-    padding: 1em;
-  }
+background-color:#0d2870;
+  color: white;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding: 1em;
+}
 
-  .navbar-nav .nav-item .nav-link {
-	color: white;
-	font-weight: bold;
+.navbar-nav .nav-item .nav-link {
+color: white;
+font-weight: bold;
+display: flex;
 }
 
 #head-navbar {
-    width: 100%;
-    white-space: nowrap;
-    display: inline-block;
-    overflow: hidden;
-  }
-
-  .nav>li {
-    display: inline-block;
-    width:initial;
-    white-space: nowrap;
-  }
-  .nav { 
-    display: inline-block;
-  }
-
-  .navbar-nav .nav-link {
-    margin-right: 20px;
+  width: 100%;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
 }
 
-.showcase {
-    width: 100%;
-    height: 93vh;
-    background-image: url('../MovieData/backimage.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    opacity: 0.4;
+.nav>li {
+  display: inline-block;
+  width:initial;
+  white-space: nowrap;
+}
+.nav { 
+  display: inline-block;
 }
 
-.showcase {
-  height: 400px;
+.navbar-nav .nav-link {
+  margin-right: 20px;
+}
+
+
+section {
+  background-image: url('../MovieData/backimage.jpg'); 
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 form {
-  width: 500px;
-  margin: 50px auto;
+  width: 800px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 30px;
+  opacity: 95%;
+  shape-margin: 30%;
 }
 
-input[type="text"] {
-    padding: 14px 20px;
-    background-color: #f1f1f1;
-    border: 0px solid #221f1f;
-    font-size: 16px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2) 0 6px 2opx p rgba(0,0,0,0.19);
-    width: 800px;
-    height: auto;
-    position: absolute;
-    top: 30%;
-    left: 20%;
-  }
-  
-  button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: 0px solid #221f1f;
-    padding: 14px 20px;
-    align-items: center;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-left: 5px;
-    height: fit-content;
-    vertical-align: middle;
-    position: absolute;
-    top: 30%;
-    left: 82.5%;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0069d9;
-  }
+.movie-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+label {
+  padding: 18px 0px;
+  font-size: 22px;
+  color: black;
+  font-weight: bold;
+}
+
+input, textarea {
+  background-color: #f1f1f1;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+  width: 400px;
+  height: auto;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin: 10px 0;
+  align-self: center; 
+}
+
+input[type] {
+  align-self: center; 
+}
+
+input[type] {
+  color: black;
+  font-weight: bold;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  align-items: end;
+}
+
+footer {
+  background-image: linear-gradient(to bottom right,#0d2870, #051235);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.footer-section {
+  width: calc(25% - 20px);
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li:hover {
+  text-decoration: underline;
+}
