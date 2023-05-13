@@ -1,9 +1,11 @@
+/* General style */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Set default styles for the body */
 body {
   font-family: 'Arial', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -69,8 +71,7 @@ display: flex;
   margin-right: 20px;
 }
 
-
-section {
+section  {
   background-image: url('../MovieData/backimage.jpg'); 
   background-size: cover;
   background-position: center;
@@ -78,9 +79,10 @@ section {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
+/* Style the addMovieForm section */
 form {
   width: 800px;
   background-color: #fff;
@@ -90,46 +92,145 @@ form {
   shape-margin: 30%;
 }
 
-.movie-list {
+/* Style the movie list form */
+.modal-content {
+  display: flexbox;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  align-items: center;
+}
+.close-button {
+  align-self: flex-end;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+#modalTitle {
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-top: 0;
 }
 
 label {
-  padding: 18px 0px;
-  font-size: 22px;
-  color: black;
   font-weight: bold;
-}
-
-input, textarea {
-  background-color: #f1f1f1;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
-  width: 400px;
-  height: auto;
-  font-size: 16px;
-  border-radius: 8px;
-  padding: 12px 18px;
-  margin: 10px 0;
-  align-self: center; 
-}
-
-input[type] {
-  align-self: center; 
-}
-
-input[type] {
   color: black;
-  font-weight: bold;
-  padding: 14px 20px;
-  border-radius: 8px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"],
+.modal-content textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
   font-size: 16px;
+}
+
+#submit-edit {
+  background-color: #0d2870;
+  border: 1px solid #0d2870;
+  color: #fff;
+  padding: 10px 20px;
   cursor: pointer;
-  margin: 10px;
-  align-items: end;
+  font-size: 16px;
 }
+
+#submit-edit:hover {
+  background-color: #fff;
+  border: 1px solid #0d2870;
+  color: #0d2870;
+}
+
+/* Style the movie-list section */
+#movie-list {
+  display: none;
+}
+
+#movie-list.visible {
+  display: block;
+}
+
+.movie-details {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.movie-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.movie-year {
+  font-size: 18px;
+  font-weight: bold;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.movie-runtime {
+  font-size: 18px;
+  font-weight: bold;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.movie-rating i {
+  color: #ffc107;
+  margin-right: 5px;
+}
+
+.movie-cast {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.movie-plot {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.edit-movie,
+.delete-movie {
+  background-color: #0d2870;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.edit-movie:hover,
+.delete-movie:hover {
+  background-color: #fff;
+  border: 1px solid #0d2870;
+  color: #0d2870;
+}
+
 
 footer {
   background-image: linear-gradient(to bottom right,#0d2870, #051235);

@@ -32,26 +32,49 @@
           </li>
         </ul>
       </header>
-      
-      <section class="showcase">
-    <div class="movie-list">
-      <form>
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title"><br>
-        <label for="year">Year:</label>
-        <input type="number" id="year" name="year"><br>
-        <label for="runtime">Runtime:</label>
-        <input type="number" id="runtime" name="runtime"><br>
-        <label for="rating">Rating:</label>
-        <input type="number" step="0.1" id="rating" name="rating"><br>
-        <label for="plot">Plot:</label>
-        <textarea id="plot" name="plot"></textarea><br>
-        <label for="cast">Cast:</label>
-        <textarea id="cast" name="cast"></textarea><br>
-        <input type="submit" value="Add Movie">
-      </form>
-    </div>
-  </section>
+
+        <section>
+          <div id="addMovieModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <form id="addMovieForm">
+                <h2 id="modalTitle">Add Movie</h2>
+                <label for="title">Title:</label>
+                <input type="text" id="title" placeholder="title"><br>
+                <label for="year">Year:</label>
+                <input type="number" id="year" placeholder="year"><br>
+                <label for="runtime">Runtime:</label>
+                <input type="number" id="runtime" placeholder="runtime"><br>
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" name="rating" step="0.1" min="0" max="10"><br>
+                <label for="plot">Plot:</label>
+                <textarea id="plot" placeholder="plot"></textarea><br>
+                <label for="cast">Cast:</label>
+                <textarea id="cast" placeholder="cast"></textarea><br>
+                <input type="submit" id="submit-edit" value="Add Movie"><i class="fa-solid fa-plus"></i>
+              </form>
+            </div>
+          </div>
+          
+          <!-- search results go here -->
+           
+          <div id="movie-list">
+              <h1>Movie List</h1>
+                <h2 class="movie-title"></h2>
+                <p class="movie-year"></p>
+                <p class="movie-runtime"></p>
+                <div class="movie-rating"></div>
+                <p class="movie-cast"></p>
+                <p class="movie-plot"></p>
+                <button type="button" class="edit-movie"><i class="fas fa-edit"></i>Edit</button>
+                <button class="delete-movie"><i class="fas fa-trash"></i>Delete</button>
+               </article>
+             </div>
+            
+          </div>
+        </div>
+      </section>
+
   <footer>
     <div class="footer-section">
       <h3>THE MD</h3>
@@ -63,8 +86,8 @@
     <div class="footer-section">
       <h3>GET INVOLVED</h3>
       <ul>
-        <li>Contribution Bible</li>
-        <li>Add New Movie</li>
+        <li>Contrivution Bible</li>
+        <li>Add Movie</li>
       </ul>
     </div>
     <div class="footer-section">
