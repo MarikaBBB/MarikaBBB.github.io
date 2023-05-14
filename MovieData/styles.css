@@ -282,8 +282,35 @@ li:hover {
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 767px) {
-  .new-container, .addMovieForm, .modal-content {
-    max-width: 100%;
+/* Center modal on mobile devices */
+@media only screen and (max-width: 600px) {
+  .modal {
+    margin: 0;
+    padding-top: 10%;
+  }
+}
+
+/* Make form inputs and labels stack on top of each other */
+@media only screen and (max-width: 600px) {
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  form input,
+  form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Make buttons stack on top of each other */
+@media only screen and (max-width: 600px) {
+  .button-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .button-group input[type="submit"] {
+    margin-bottom: 10px;
   }
 }
