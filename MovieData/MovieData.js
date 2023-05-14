@@ -52,18 +52,20 @@ function createMovieList() {
     const movieElement = createMovieElement(movieTitle, movie);
     movieList.appendChild(movieElement);
   }
+
+  console.log('movieList', movieList);
 }
 
 function createMovieElement(title, movie) {
   const movieElement = document.createElement("div");
   movieElement.classList.add("movie");
   movieElement.innerHTML = `
-    <div class="movie-details">
-      <h3 class="movie-title">${title}</h3>
+    <div class="new-container">
+      <h2 class="movie-title">${title}</h2>
       <p class="movie-plot">${movie.plot}</p>
       <p class="movie-cast"><b>Cast:</b> ${movie.cast.join(", ")}</p>
       <p class="movie-runtime"><b>Runtime:</b> ${movie.runtime} mins</p>
-      <p class="movie-rating"><b>Rating:</b> ${movie.rating}/10</p>
+      <div class="movie-rating"><b>Rating:</b> ${movie.rating}/10</div>
     </div>
     <div class="movie-actions">
       <button class="edit-button">Edit</button>
@@ -118,9 +120,6 @@ submitButton.addEventListener("click", (event) => {
 
   // reset form
   addMovieForm.reset();
-
-  // close modal
-  closeModal();
 });
 
 // Open the modal
@@ -154,14 +153,24 @@ function fillForm(movie) {
   modalTitle.innerHTML = "Edit Movie";
 }
 
-// Close the modal
-function closeModal() {
-  // Get the modal element
-  var modal = document.getElementById("addMovieModal");
-
-  // Hide the modal
-  modal.style.display = "none";
-}
-
 // Get the modal title element
 var modalTitle = document.getElementById("modalTitle");
+
+// Select movie element
+movieList.addEventListener("click", (event) => {
+  const movieElement = event.target.closest(".movie");
+
+  if (!movieElement) return; // if clicked outside of a movie element, do nothing
+
+  // remove selected class from previously selected movie element
+  const selectedMovieElement = document.querySelector(".selected");
+  if (selectedMovieElement) {
+    selectedMovieElement.classList.remove("selected");
+  }
+
+  // add selected class to selected movie element
+  movieElement.classList.add("selected");
+});
+
+// Call createMovieList on load
+// createMovieList();

@@ -99,18 +99,6 @@ form {
   padding-top: 5px;
   align-items: center;
 }
-.close-button {
-  align-self: flex-end;
-  border: none;
-  background-color: transparent;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.close-button:hover {
-  color: red;
-}
 
 form {
   display: flex;
@@ -155,95 +143,125 @@ label {
 }
 
 /* Style the movie-list section */
+#searchResult {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0;
+  color: #fff;
+  background-color: #0d2870;
+  shape-rendering: crispEdges;
+}
+
+.new-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+
 #movie-list {
-  display: none;
-}
-
-#movie-list.visible {
-  display: block;
-}
-
-.movie-details {
-  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 100%;
+  margin: 5px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  padding: 20px;
+}
+
+.new-container {
+  background-color: #fff;
+  opacity: 95%;
+  shape-margin: 30%;
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
 }
 
 .movie-title {
-  font-size: 24px;
   font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
-.movie-year {
-  font-size: 18px;
-  font-weight: bold;
-  color: #999;
-  margin-bottom: 5px;
-}
-
-.movie-runtime {
-  font-size: 18px;
-  font-weight: bold;
-  color: #999;
-  margin-bottom: 5px;
-}
-
-.movie-rating {
-  display: flex;
-  align-items: center;
+.movie {
+  flex: 1;
+  font-size: 14px;
+  color: #322b2b; 
+  overflow-y: auto; 
+  width: calc(50% - 10px);
+  overflow: hidden;
+  flex: 1 1 calc(50% - 10px);
+  max-width: calc(50% - 10px);
   margin-bottom: 10px;
+  text-align: left;
 }
 
-.movie-rating i {
-  color: #ffc107;
-  margin-right: 5px;
-}
-
-.movie-cast {
-  font-size: 18px;
-  margin-bottom: 10px;
+.movie-year
+.movie-runtime
+.movie-rating
+.movie-cast
+.movie-plot {
+  margin-bottom: 1em;
+  word-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .movie-plot {
-  font-size: 16px;
-  margin-bottom: 20px;
+  word-wrap: break-word;
 }
 
-.edit-movie,
-.delete-movie {
+.edit-button {
   background-color: #0d2870;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid #0d2870;
   color: #fff;
+  padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
-  padding: 10px;
-  margin-right: 10px;
 }
 
-.edit-movie:hover,
-.delete-movie:hover {
+.edit-button:hover {
+  background-color: #fff;
+  border: 1px solid #0d2870;
+  color: #0d2870;
+}
+
+.delete-button {
+  background-color: #0d2870;
+  border: 1px solid #0d2870;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delete-button:hover {
   background-color: #fff;
   border: 1px solid #0d2870;
   color: #0d2870;
 }
 
 
+
+/* Style the footer section */
 footer {
   background-image: linear-gradient(to bottom right,#0d2870, #051235);
   color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 40px;
+  padding: 30px;
 }
 
-.footer-section {
-  width: calc(25% - 20px);
-}
 
 h3 {
   font-size: 20px;
@@ -262,4 +280,10 @@ li {
 
 li:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+  .new-container {
+    max-width: 100%;
+  }
 }
