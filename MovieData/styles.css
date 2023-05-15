@@ -29,10 +29,18 @@ a {
 
 p {
   margin: 0-5rem 0;
+  margin-left: 0%;
+  max-width: calc(100% - 10%);
+  line-height: 1.5;
 }
 
 img {
   width: 100%;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding-bottom: 30px
 }
 
 /* Style the header */ 
@@ -84,7 +92,15 @@ section  {
 
 /* Style the addMovieForm section */
 form {
-  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  width: 100%;
+  min-width: 500px;
+  max-width: 800px;
+  height: auto;
   background-color: #fff;
   padding: 30px;
   border-radius: 30px;
@@ -92,17 +108,20 @@ form {
   shape-margin: 30%;
 }
 
-/* Style the movie list form */
-.modal-content {
-  display: flexbox;
-  margin-bottom: 20px;
-  padding-top: 5px;
-  align-items: center;
+@media (max-width: 768px) {
+  form {
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    shape-margin: 20%;
+  }
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+/* Style the movie list form */
+.modal-content {
+  margin-bottom: 50px;
+  padding-top: 5px;
+  align-items: center;
 }
 
 #modalTitle {
@@ -175,7 +194,7 @@ label {
   background-color: #fff;
   opacity: 95%;
   shape-margin: 30%;
-  min-width: 500px;
+  width: 80%;
   max-width: 500px;
   min-height: 200px;
   max-height: 200px;
@@ -184,12 +203,19 @@ label {
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .new-container {
+    width: 100%;
+  }
+}
+
 .movie-title {
   font-weight: bold;
   color: black;
   text-align: center;
-  margin-top: 0;
+  margin-top: 5px;
   margin-bottom: 10px;
+  padding-top: 5%;
 }
 
 .movie {
@@ -202,22 +228,38 @@ label {
   flex: 1 1 calc(50% - 10px);
   max-width: calc(50% - 10px);
   margin-bottom: 10px;
-  text-align: left;
+  text-align: justify;
+  word-wrap: break-word;
 }
 
-.movie-year
+/*.movie-year
 .movie-runtime
 .movie-rating
 .movie-cast
 .movie-plot {
+  flex: 1;
+  font-size: 14px;
+  margin-bottom: 1em;
+  color: #322b2b; 
+  overflow-y: auto; 
+  width: calc(50% - 10px);
+  overflow: hidden;
+  flex: 1 1 calc(50% - 10px);
+  max-width: calc(50% - 10px);
+  word-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
+}*/
+
+.movie-plot {
+  word-wrap: break-word;
+}
+
+.movieElement {
   margin-bottom: 1em;
   word-wrap: break-word;
   text-align: justify;
   text-justify: inter-word;
-}
-
-.movie-plot {
-  word-wrap: break-word;
 }
 
 .edit-button {
@@ -260,6 +302,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 30px;
+  height: auto;
 }
 
 
@@ -280,37 +323,4 @@ li {
 
 li:hover {
   text-decoration: underline;
-}
-
-/* Center modal on mobile devices */
-@media only screen and (max-width: 600px) {
-  .modal {
-    margin: 0;
-    padding-top: 10%;
-  }
-}
-
-/* Make form inputs and labels stack on top of each other */
-@media only screen and (max-width: 600px) {
-  form label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  form input,
-  form textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
-
-/* Make buttons stack on top of each other */
-@media only screen and (max-width: 600px) {
-  .button-group {
-    display: flex;
-    flex-direction: column;
-  }
-  .button-group input[type="submit"] {
-    margin-bottom: 10px;
-  }
 }
