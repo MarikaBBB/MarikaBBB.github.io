@@ -2,7 +2,7 @@ Movie Database User Interface
 
 Overview
 
-For this project, my goal is to build a user interface using HTML and populate it with data from a JavaScript object. I have been provided with a data object containing information about movies. I have the freedom to choose how to display the data and build the interface. Additionally, I need to incorporate interactivity, allowing users to interact with the data. Users can view movie details, add new movies, and update existing movie information.
+For this project, my goal is to build a user interface using HTML and populate it with data from a JavaScript object. I have been provided with a data object containing information about movies. I have the freedom to choose how to display the data and build the interface. Additionally, I need to incorporate interactivity, allowing users to interact with the data. Users can view movie details, add new movies, and update existing movie information. To build the interface look I got inspired by themoviedb website. 
 
 Requirements
 
@@ -14,7 +14,7 @@ To successfully complete this project, I need to meet the following requirements
 - Provide functionality for users to update the movie data stored in the object by interacting with the webpage.
 
 Planning
-To begin the project, I will plan out the necessary steps and structure of the code.
+To begin the project, I planned out the necessary steps and structure of the code.
 
 - Set up the project directory and create the HTML and JavaScript files.
 - Establish the HTML structure by creating container and section elements.
