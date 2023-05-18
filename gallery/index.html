@@ -8,47 +8,49 @@
     <meta name="description" content="This is my Gallery web page where I display my projects">
   </head>
   <body>
+    <!-- Header Section -->
     <header>
         <div id="header">
             <h1>My Project's Gallery</h1>
      </header>
         </div>
-    
+        <!-- End of Header Section -->
+    <!-- Main Homepage Section -->
     <body>
         <div class="container">
             <div class="card">
                 <div class="card-image"> 
-                  <img src="images/bookshelves.jpeg" alt="Project 1">
+                  <img src="images/bookshelves.jpeg" alt="Photo of project one for Founders & Coders application">
                 </div>
                 <div class="card-content">
                     <h2>Project 1</h2>
                     <button class="toggle-description" onclick="myFunction()">Hide/Show Description</button>
-                    <p class="text">This is a bookshelf web page featuring my top 3 favourite books. The page includes book cover images and information on the title, author, and year of publication for each book. The page also displays the current date and features a link to my Goodreads profile for anyone who wants to see what I am currently reading.</p>
+                    <p class="text">For the first project, I showcased a bookshelf web page featuring my top 3 favourite books. The page includes book cover images and information on the title, author, and year of publication for each book. The page also displays the current date and features a link to my Goodreads profile for anyone who wants to see what I am currently reading.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-image">
-                    <img src="images/galleryProjects.jpeg" alt="Project 2">
+                    <img src="images/galleryProjects.jpeg" alt="Photo of project gallery as project two for Founders & Coders application">
                 </div>
                 <div class="card-content">
                     <h2>Project 2</h2>
                     <button class="toggle-description" onclick="myFunction()">Hide/Show Description</button>
-                    <p class="text">This project is a web gallery showcasing a collection of my projects developed for the Founders & Coders application. The gallery is built using HTML, CSS, and JavaScript, and is designed to be responsive and adaptable to different screen sizes.</p>
+                    <p class="text">This project gallery is made up of screenshot cards pf each of the five projects developed for the Founders & Coders application. The gallery is built using HTML, CSS, and JavaScript. I used media queries to make the cards adaptable to different screen sizes. On small screen the cards stack on top of each other.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-image">
-                    <img src="images/MovieDatabase.jpeg" alt="Project 3">
+                    <img src="images/MovieDatabase.jpeg" alt="Photo of movie data as project three for Founders & Coders application">
                 </div>
                 <div class="card-content">
                     <h2>Project 3</h2>
                     <button class="toggle-description" onclick="myFunction()">Hide/Show Description</button>
-                    <p class="text">I used HTML,  CSS and JavaScript to build a user-friendly interface that displays movie data, allows users to interact with the data, view movie details, add new movies, and update existing movie information.</p>
+                    <p class="text">For the third project, I built a user-friendly interface that displays movie data, allows users to interact with the data, view movie details, add new movies, and update existing movie information. For the look of this webpage, I got inspired by themoviedb website. In the JavaScript file, I created different functions and events. For example,  the createMovieList function is responsible for creating the movie list. It iterates over the movieData object using a for...in loop, retrieves the information for each movie, and creates a movie element using the createMovieElement function. The createMovieElement function takes a movie title and its corresponding object from movieData and creates an HTML element to represent the movie. It creates a div element with the class "movie" and sets its inner HTML using a template literal. It also adds event listeners to the edit and delete buttons.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-image">
-                    <img src="images/website.jpeg" alt="Project 4">
+                    <img src="images/website.jpeg" alt="Photo of application website as project four for Founders & Coders application">
                 </div>
                 <div class="card-content">
                     <h2>Project 4</h2>
@@ -58,7 +60,7 @@
             </div>
             <div class="card">
                 <div class="card-image">
-                    <img src="images/game.jpeg" alt="Project 5">
+                    <img src="images/game.jpeg" alt="Photo of game project as project five for Founders & Coders application">
                 </div>
                 <div class="card-content">
                     <h2>Project 5</h2>
@@ -71,7 +73,7 @@
         </div>
         <script src="script.js"></script>
     <footer>
-        <p>Author: Marika Bertelli</p>
+        <p>&copy; Author: Marika Bertelli</p>
     </footer>
   </body>
 </html>
