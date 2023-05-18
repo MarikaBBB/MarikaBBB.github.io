@@ -307,10 +307,9 @@ li:hover {
     }
 
     /* Movie list styles */
-    #movie-list .new-container {
-      width: 100%;
-      margin-bottom: 20px;
-      overflow-y: auto;
+    #movie-list {
+      flex-wrap: nowrap;
+      flex-direction: column;
     }
   
     /* Movie list columns */
