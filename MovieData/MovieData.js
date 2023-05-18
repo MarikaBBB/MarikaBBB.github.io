@@ -56,12 +56,12 @@ function createMovieList() {
   console.log('movieList', movieList);
 }
 
-function createMovieElement(title, movie) {
+function createMovieElement(movieTitle, movie) {
   const movieElement = document.createElement("div");
   movieElement.classList.add("movie");
   movieElement.innerHTML = `
     <div class="new-container">
-      <h2 class="movie-title">${title}</h2>
+      <h2 class="movie-title">${movieTitle}</h2>
       <p class="movie-plot">${movie.plot}</p>
       <p class="movie-cast"><b>Cast:</b> ${movie.cast.join(", ")}</p>
       <p class="movie-runtime"><b>Runtime:</b> ${movie.runtime} mins</p>
@@ -79,7 +79,7 @@ function createMovieElement(title, movie) {
   // Edit button click handler
   editButton.addEventListener("click", () => {
     openModal();
-    fillForm(movie);
+    fillForm(movieTitle, movie);
     modalTitle.textContent = "Edit Movie";
   });
 
@@ -132,7 +132,7 @@ function openModal() {
 }
 
 // Fill the form with movie data
-function fillForm(movie) {
+function fillForm(movieTitle,movie) {
   // Get the form elements
   var titleInput = document.getElementById("title");
   var yearInput = document.getElementById("year");
@@ -142,7 +142,7 @@ function fillForm(movie) {
   var castInput = document.getElementById("cast");
 
   // Fill the form with movie data
-  titleInput.value = movie.title;
+  titleInput.value = movieTitle;
   yearInput.value = movie.year;
   runtimeInput.value = movie.runtime;
   ratingInput.value = movie.rating;
@@ -172,5 +172,3 @@ movieList.addEventListener("click", (event) => {
   movieElement.classList.add("selected");
 });
 
-// Call createMovieList on load
-// createMovieList();
