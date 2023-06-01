@@ -23,8 +23,8 @@ body {
   }
 
   .logo {
-    height: 140px;
-    width: 120px;
+    height: 130px;
+    width: 110px;
     vertical-align: middle;
     margin-right: 5px;
   }
@@ -36,7 +36,8 @@ body {
 }
 
 #myCanvas {
-    border:1px solid #000000;
+    border:1px solid #d3d3d3;
+    background-color: #F2F0F5;
     margin: auto;
     justify-content: center;
 }
@@ -59,5 +60,5 @@ body {
     border-radius: 3em;
     cursor: pointer;
     color: #0c67ae;
-    margin-top: 3px;
+    margin-top: 5px;
   }
