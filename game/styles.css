@@ -1,6 +1,6 @@
 * {
 	padding: 0;
-    margin: 0;
+  margin: 0;
 }
 
 body {
@@ -13,12 +13,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .title {
     font-size: 32px;
     margin-right: 10px;
+    margin-top: 20px;
     font-family: "Pacifico", sans-serif;
   }
 
@@ -29,36 +30,146 @@ body {
     margin-right: 5px;
   }
 
-
-#title {
-    height: 150px;
-    width: 120px;
-}
-
-#myCanvas {
-    border:1px solid #d3d3d3;
-    background-color: #F2F0F5;
-    margin: auto;
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    align-items: center;
     justify-content: center;
-}
-
-.container {
+    height: 100vh;
+  }
+  
+  .game-grid {
     display: flex;
     align-items: flex-start;
-    margin-right: 95px;
+    margin-bottom: auto;
   }
 
-  .result-section {
-    margin-top: 10px;
-    margin-left: 20px;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1px;
+  padding: 0;
+  margin-bottom: auto;
+  margin-left: 100px;
+  list-style: none;
+  border: 2px solid #0c67ae;
+  margin-bottom: auto;
+}
 
-  #start-button {
-    font-size: 1.2em;
-    padding: 0.8em 2em;
-    border: none;
-    border-radius: 3em;
-    cursor: pointer;
-    color: #0c67ae;
-    margin-top: 5px;
-  }
+.tile {
+  width: 187.5px; /* 750px divided by 4 */
+  height: 101.25px; /* 405px divided by 4 */
+  background-image: url("spirited_away.png");
+  background-size: 750px 405px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.tile1 {
+  background-position: 0 0;
+}
+
+.tile2 {
+  background-position: -187.5px 0;
+}
+
+.tile3 {
+  background-position: -375px 0;
+}
+
+.tile4 {
+  background-position: -562.5px 0;
+}
+
+.tile5 {
+  background-position: 0 -101.25px;
+}
+
+.tile6 {
+  background-position: -187.5px -101.25px;
+}
+
+.tile7 {
+  background-position: -375px -101.25px;
+}
+
+.tile8 {
+  background-position: -562.5px -101.25px;
+}
+
+.tile9 {
+  background-position: 0 -202.5px;
+}
+
+.tile10 {
+  background-position: -187.5px -202.5px;
+}
+
+.tile11 {
+  background-position: -375px -202.5px;
+}
+
+.tile12 {
+  background-position: -562.5px -202.5px;
+}
+
+.tile13 {
+  background-position: 0 -303.75px;
+}
+
+.tile14 {
+  background-position: -187.5px -303.75px;
+}
+
+.tile15 {
+  background-position: -375px -303.75px;
+}
+
+.tileEmpty {
+  background: white;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.moves,
+.timer {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  font-size: 1.2em;
+  padding: 0.8em 2em;
+  border: 1px solid #0c67ae;
+  border-radius: 3em;
+  cursor: pointer;
+  color: #0c67ae;
+}
+
+#movie-img {
+  display: block;
+  width: 130px;
+  height: 90px;
+  background-image: url("./spirited_away.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+#movie-img.hidden {
+  display: none;
+}
+
+
+
