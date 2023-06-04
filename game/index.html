@@ -18,7 +18,7 @@
 
   <div class="container">
     <div class="game-grid">
-    <ul class="grid">
+      <ul class="grid" id="grid">
       <li class="tile tile1" data-value="0"></li>
       <li class="tile tile2" data-value="1"></li>
       <li class="tile tile3" data-value="2"></li>
@@ -39,7 +39,7 @@
     <div class="game-info">
       <button id="movie-btn" onclick="toggleImage()">Click for Hint</button>
       <img id="movie-img" width="130" height="90" src="./spirited_away.png" alt="Spirited Away">
-      <button onclick="shuffle();">New Game</button>
+      <button class="randomMove" onclick="shuffle();">New Game</button>
       <h2 class="moves">Moves: <span id="turns">0</span></h2>
       <h2 class="timer">Timer: <span id="timer">00:00:00</span></h2> 
     </div> 
