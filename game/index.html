@@ -19,30 +19,44 @@
   <div class="container">
     <div class="game-grid">
       <ul class="grid" id="grid">
-      <li class="tile tile1" data-value="0"></li>
-      <li class="tile tile2" data-value="1"></li>
-      <li class="tile tile3" data-value="2"></li>
-      <li class="tile tile4" data-value="3"></li>
-      <li class="tile tile5" data-value="4"></li>
-      <li class="tile tile6" data-value="5"></li>
-      <li class="tile tile7" data-value="6"></li>
-      <li class="tile tile8" data-value="7"></li>
-      <li class="tile tile9" data-value="8"></li>
-      <li class="tile tile10" data-value="9"></li>
-      <li class="tile tile11" data-value="10"></li>
-      <li class="tile tile12" data-value="11"></li>
-      <li class="tile tile13" data-value="12"></li>
-      <li class="tile tile14" data-value="13"></li>
-      <li class="tile tile15" data-value="14"></li>
-      <li class="tile tileEmpty" data-value="15"></li>
-    </ul>
+        <li class="tile tile1" data-value="0" onclick="moveTile(this)"></li>
+        <li class="tile tile2" data-value="1" onclick="moveTile(this)"></li>
+        <li class="tile tile3" data-value="2" onclick="moveTile(this)"></li>
+        <li class="tile tile4" data-value="3" onclick="moveTile(this)"></li>
+        <li class="tile tile5" data-value="4" onclick="moveTile(this)"></li>
+        <li class="tile tile6" data-value="5" onclick="moveTile(this)"></li>
+        <li class="tile tile7" data-value="6" onclick="moveTile(this)"></li>
+        <li class="tile tile8" data-value="7" onclick="moveTile(this)"></li>
+        <li class="tile tile9" data-value="8" onclick="moveTile(this)"></li>
+        <li class="tile tile10" data-value="9" onclick="moveTile(this)"></li>
+        <li class="tile tile11" data-value="10" onclick="moveTile(this)"></li>
+        <li class="tile tile12" data-value="11" onclick="moveTile(this)"></li>
+        <li class="tile tile13" data-value="12" onclick="moveTile(this)"></li>
+        <li class="tile tile14" data-value="13" onclick="moveTile(this)"></li>
+        <li class="tile tile15" data-value="14" onclick="moveTile(this)"></li>
+        <li class="tile tileEmpty" data-value="15" onclick="moveTile(this)"></li>
+      </ul>
     <div class="game-info">
       <button id="movie-btn" onclick="toggleImage()">Click for Hint</button>
       <img id="movie-img" width="130" height="90" src="./spirited_away.png" alt="Spirited Away">
       <button class="randomMove" onclick="shuffle();">New Game</button>
       <h2 class="moves">Moves: <span id="turns">0</span></h2>
-      <h2 class="timer">Timer: <span id="timer">00:00:00</span></h2> 
-    </div> 
+      <h2 class="timer">Timer: <span id="timer">00:00:00</span></h2>
+      <div class="button-row">
+        <button class="timer-button" onclick="startTimer()">Start</button>
+        <button class="timer-button" onclick="stopTimer()">Stop</button>
+        <button class="timer-button" onclick="resetTimer()">Reset</button>
+      </div>
+      <button class="next-level-button" onclick="goToNextLevel()">Next Level</button>
+      <div id="guess-form-container">
+        <form id="guess-form">
+          <label for="guess-input">Guess the Movie Title:</label>
+          <input type="text" id="guess-input" required>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="guess-result"></div>
+      </div>
+    </div>
    </div>
   </div>
 
