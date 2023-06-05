@@ -56,11 +56,6 @@ body {
   margin-left: 100px;
   list-style: none;
   border: 2px solid #0c67ae;
-  margin-bottom: auto;
-}
-
-#guess-form-container #guess-result {
-  padding-right: 100px;
 }
 
 #guess-form-container {
@@ -74,12 +69,18 @@ body {
 
 #guess-form {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 10px; 
 }
 
+#guess-form label {
+  margin-right: 10px;
+}
+
 #guess-result {
   margin-left: 10px;
+  margin-top: 10px;
 }
 
 #guess-form input[type="text"] {
@@ -89,6 +90,7 @@ body {
 #guess-form button[type="submit"] {
   padding: 5px 10px;
   font-size: 18px;
+  margin-top: 5px;
 }
 
 .tile {
@@ -168,9 +170,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
   margin-left: 20px;
   margin-right: 10px;
+  margin-top: -5px;
+  margin-bottom: 20px;
+  justify-content: space-between;
 }
 
 .moves,
@@ -213,6 +217,7 @@ button {
   color: #0c67ae;
   border: 1px solid #0c67ae;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .button-row {
@@ -220,21 +225,105 @@ button {
   justify-content: center;
   margin-top: 10px;
 }
-
-/*
-#guess-form {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.next-level-button {
+  margin-top: 90px; 
+  margin-bottom: 10px;
 }
 
-#guess-form input[type="text"] {
-  margin-right: 10px;
-}
+/* Mobile responsive */
+@media only screen and (max-width: 768px) {
+  .container {
+    height: auto;
+  }
 
-#guess-form button[type="submit"] {
-  margin-left: 10px;
-  padding: 5px 10px;
-  font-size: 18px;
-} */
+  .grid {
+    padding: auto;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+  }
+
+  .tile {
+    width: calc(33.33% - 10px);
+  }
+
+  .game-info {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .header {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    height: 90px;
+    width: 75px;
+    margin-right: 0;
+  }
+
+  .game-grid {
+    display: block;
+  }
+
+  .grid {
+    margin: 0 auto;
+    width: 300px; 
+  }
+
+  .tile {
+    width: 100%;
+    height: auto;
+  }
+
+  #guess-form-container {
+    padding: 0;
+    width: 300px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #guess-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+  #guess-form label {
+    margin-bottom: 5px; 
+  }
+
+  #guess-form input[type="text"],
+  #guess-form button[type="submit"] {
+    width: 100%;
+    max-width: 300px; /* Limit the maximum width of the input and button */
+  }
+  
+  #guess-result {
+    margin-left: 10px;
+    margin-top: 10px; 
+  }
+
+  .game-info {
+    margin-top: 20px;
+  }
+
+  .moves,
+  .timer {
+    font-size: 14px;
+  }
+
+  .timer-button {
+    font-size: 12px;
+  }
+}

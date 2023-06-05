@@ -16,6 +16,15 @@
     <h1 class="title">Magical Sliding Adventures</h1>
   </div>
 
+  <div id="guess-form-container">
+    <form id="guess-form">
+      <label for="guess-input">Guess the Movie Title:</label>
+      <input type="text" id="guess-input" required>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="guess-result"></div>
+  </div>
+
   <div class="container">
     <div class="game-grid">
       <ul class="grid" id="grid">
@@ -36,6 +45,7 @@
         <li class="tile tile15" data-value="14" onclick="moveTile(this)"></li>
         <li class="tile tileEmpty" data-value="15" onclick="moveTile(this)"></li>
       </ul>
+      
     <div class="game-info">
       <button id="movie-btn" onclick="toggleImage()">Click for Hint</button>
       <img id="movie-img" width="130" height="90" src="./spirited_away.png" alt="Spirited Away">
@@ -48,14 +58,6 @@
         <button class="timer-button" onclick="resetTimer()">Reset</button>
       </div>
       <button class="next-level-button" onclick="goToNextLevel()">Next Level</button>
-      <div id="guess-form-container">
-        <form id="guess-form">
-          <label for="guess-input">Guess the Movie Title:</label>
-          <input type="text" id="guess-input" required>
-          <button type="submit">Submit</button>
-        </form>
-        <div id="guess-result"></div>
-      </div>
     </div>
    </div>
   </div>
