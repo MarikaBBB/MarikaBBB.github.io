@@ -234,6 +234,7 @@ button {
 @media only screen and (max-width: 768px) {
   .container {
     height: auto;
+    width: 100%;
   }
 
   .grid {
@@ -242,6 +243,7 @@ button {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     grid-auto-flow: dense;
+    width: 100%;
   }
 
   .tile {
