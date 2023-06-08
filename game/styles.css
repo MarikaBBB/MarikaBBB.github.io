@@ -233,7 +233,6 @@ button {
 /* Mobile responsive */
 @media only screen and (max-width: 768px) {
   .container {
-    height: auto;
     width: 100%;
   }
 
