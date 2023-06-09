@@ -1,21 +1,29 @@
 // Function to toggle the movie image visibility
 function toggleImage() {
-  var movieImg = document.getElementById("movie-img");
-  movieImg.classList.toggle("hidden"); // Show or hide the movie image
+  var movieImage = document.getElementById("movie-img");
+  movieImage.classList.toggle("hidden"); // Show or hide the movie image
+}
+
+// Function to start the timer
+function startTimer() {
+  timerInterval = setInterval(function () {
+    timerSeconds++;
+    updateTimer();
+  }, 1000);
 }
 
 // Function to shuffle the tiles randomly
 function shuffle() {
-  startTimer(); // Start the timer automatically
-  
+  startTimer();
+
   var grid = document.getElementById("grid");
   var tiles = grid.getElementsByClassName("tile");
-  var emptyTile = grid.getElementsByClassName("tileEmpty")[0];
 
   // Create an array of tile values
   var tileValues = [];
   for (var i = 0; i < tiles.length; i++) {
     tileValues.push(parseInt(tiles[i].getAttribute("data-value")));
+    tiles[i].addEventListener("dragstart", drag); 
   }
 
   // Shuffle the tile values
@@ -30,9 +38,8 @@ function shuffle() {
   for (var k = 0; k < tiles.length; k++) {
     tiles[k].setAttribute("data-value", tileValues[k]);
     tiles[k].style.order = tileValues[k];
-    if (tileValues[k] === 15) {
-      emptyTile = tiles[k];
-    }
+    tiles[k].addEventListener("drop", drop); 
+    tiles[k].addEventListener("dragover", allowDrop); 
   }
 
   // Reset moves count and timer
@@ -40,36 +47,51 @@ function shuffle() {
   resetTimer();
 }
 
+// Add an event listener to button "New ame"
+document.getElementById("shuffle-button").addEventListener("click", function() {
+  shuffle();
+});
+
 // Set the maximum number of moves
-var maxMoves = 50;
+var maxMoves = 20;
 
-// Function to move a tile
-function moveTile(tile) {
-  var grid = document.getElementById("grid");
-  var emptyTile = grid.getElementsByClassName("tileEmpty")[0];
+// Function to handle the drag start event
+function drag(event) {
+  event.target.classList.add("dragging");
+}
 
-  var tileValue = parseInt(tile.getAttribute("data-value"));
-  var emptyTileValue = parseInt(emptyTile.getAttribute("data-value"));
+// Function to swap two tiles
+function swapTiles(tile1, tile2) {
+  var tempValue = tile1.getAttribute("data-value");
+  var tempHTML = tile1.innerHTML;
 
-  var tileRow = Math.floor(tileValue / 4);
-  var emptyTileRow = Math.floor(emptyTileValue / 4);
+  tile1.setAttribute("data-value", tile2.getAttribute("data-value"));
+  tile1.innerHTML = tile2.innerHTML;
 
-  var tileCol = tileValue % 4;
-  var emptyTileCol = emptyTileValue % 4;
+  tile2.setAttribute("data-value", tempValue);
+  tile2.innerHTML = tempHTML;
+}
 
-  // Check if the tiles can be swapped
-  if (
-    (tileRow === emptyTileRow && Math.abs(tileCol - emptyTileCol) === 1) ||
-    (tileCol === emptyTileCol && Math.abs(tileRow - emptyTileRow) === 1)
-  ) {
+// Function to allow dropping on a target
+function allowDrop(event) {
+  event.preventDefault();
+}
 
-    // Swap the tiles
-    var tempOrder = tile.style.order;
-    tile.style.order = emptyTile.style.order;
-    emptyTile.style.order = tempOrder;
+// Function to handle the drop event
+function drop(event) {
+  event.preventDefault();
+  var sourceTile = document.querySelector(".dragging");
+  var targetTile = event.target;
 
-    tile.setAttribute("data-value", emptyTileValue);
-    emptyTile.setAttribute("data-value", tileValue);
+  if (sourceTile && sourceTile !== targetTile && targetTile.classList.contains("tile")) {
+    var sourceOrder = parseInt(sourceTile.style.order);
+    var targetOrder = parseInt(targetTile.style.order);
+
+    sourceTile.style.order = targetOrder;
+    targetTile.style.order = sourceOrder;
+
+    sourceTile.classList.remove("dragging");
+    targetTile.classList.remove("highlighted");
 
     // Increment the moves count
     var moves = parseInt(document.getElementById("turns").textContent);
@@ -83,10 +105,24 @@ function moveTile(tile) {
 
     // Check if the puzzle is solved
     if (isPuzzleSolved()) {
-      stopTimer();
-      alert("Congratulations! You solved the puzzle!");
+      return; // Return early to prevent further moves after the puzzle is solved
     }
   }
+}
+
+// Function to get the value of the empty tile
+function getEmptyTileValue() {
+  var grid = document.getElementById("grid");
+  var tiles = grid.getElementsByClassName("tile");
+
+  for (var i = 0; i < tiles.length; i++) {
+    var tileValue = parseInt(tiles[i].getAttribute("data-value"));
+    if (tileValue === 15) {
+      return tileValue;
+    }
+  }
+
+  return -1; // Return -1 if empty tile is not found (error case)
 }
 
 // Function to check if the puzzle is solved
@@ -101,20 +137,16 @@ function isPuzzleSolved() {
     }
   }
 
+  // Stop the timer and show win notification
+  stopTimer();
+  alert("Congratulations! You solved the puzzle!");
+
   return true;
 }
 
 // Timer functionality
 var timerInterval;
 var timerSeconds = 0;
-
-// Function to start the timer
-function startTimer() {
-  timerInterval = setInterval(function () {
-    timerSeconds++;
-    updateTimer();
-  }, 1000);
-}
 
 // Function to stop the timer
 function stopTimer() {
@@ -142,12 +174,6 @@ function padTime(time) {
   return (time < 10 ? "0" : "") + time;
 }
 
-// Function to toggle the movie image visibility
-function toggleImage() {
-  var movieImage = document.getElementById("movie-img");
-  movieImage.classList.toggle("hidden"); // Show or hide the movie image
-}
-
 // Initialize the game
 shuffle();
 
@@ -166,3 +192,27 @@ document.getElementById("guess-form").addEventListener("submit", function (event
 
   guessInput.value = ""; // Clear the input field
 });
+
+// Open the instructions modal when the instructions button is clicked
+document.getElementById("instructions-button").addEventListener("click", function () {
+  var modal = document.getElementById("instructions-modal");
+  modal.style.display = "block";
+});
+
+// Close the instructions modal when the close button is clicked
+document.getElementsByClassName("close-button")[0].addEventListener("click", function () {
+  var modal = document.getElementById("instructions-modal");
+  modal.style.display = "none";
+});
+
+// Close the instructions modal when the user clicks outside the modal
+window.addEventListener("click", function (event) {
+  var modal = document.getElementById("instructions-modal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+
+
+
+
