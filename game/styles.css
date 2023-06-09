@@ -193,6 +193,10 @@ button {
   color: #0c67ae;
 }
 
+#movie-btn {
+  font-size: 12px;
+}
+
 #movie-img {
   display: block;
   width: 130px;

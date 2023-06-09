@@ -6,6 +6,8 @@ function toggleImage() {
 
 // Function to shuffle the tiles randomly
 function shuffle() {
+  startTimer(); // Start the timer automatically
+  
   var grid = document.getElementById("grid");
   var tiles = grid.getElementsByClassName("tile");
   var emptyTile = grid.getElementsByClassName("tileEmpty")[0];
