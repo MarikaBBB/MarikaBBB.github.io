@@ -4,11 +4,16 @@ function toggleImage() {
   movieImage.classList.toggle("hidden"); // Show or hide the movie image
 }
 
-// Function to start the timer
 function startTimer() {
   timerInterval = setInterval(function () {
     timerSeconds++;
     updateTimer();
+    // Check if the time limit has been reached
+    if (timerSeconds >= 180) { // 3 minutes * 60 seconds = 180 seconds
+      stopTimer();
+      alert("Game over! You have reached the time limit.");
+      clearInterval(timerInterval);
+    }
   }, 1000);
 }
 
@@ -135,6 +140,7 @@ function isPuzzleSolved() {
     if (tileValue !== i) {
       return false;
     }
+    
   }
 
   // Stop the timer and show win notification
@@ -212,7 +218,6 @@ window.addEventListener("click", function (event) {
     modal.style.display = "none";
   }
 });
-
 
 
 
