@@ -20,6 +20,13 @@
   flex-direction: column;
 }
 
+.container-content {
+  background-color: lightblue;
+  border: 1px solid lightblue;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
 .project-container .box-image {
   position: relative;
   overflow: hidden;
@@ -49,7 +56,7 @@
 }
 
 .project-container:hover .overlay {
-  opacity: 1;
+  opacity: 1.5;
 }
 
 .project-container .overlay a {
@@ -64,6 +71,10 @@
   color: #fff;
   font-size: 18px;
   font-weight: bold;
+}
+
+.textT {
+  text-align: center;
 }
 
 .current-projects-container {
@@ -81,4 +92,5 @@
   margin: 10px;
   flex: 0 0 30%;
 }
+
 
