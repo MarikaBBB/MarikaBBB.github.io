@@ -104,67 +104,67 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 
-.tile1 {
+#tile1 {
   background-position: 0 0;
 }
 
-.tile2 {
+#tile2 {
   background-position: -187.5px 0;
 }
 
-.tile3 {
+#tile3 {
   background-position: -375px 0;
 }
 
-.tile4 {
+#tile4 {
   background-position: -562.5px 0;
 }
 
-.tile5 {
+#tile5 {
   background-position: 0 -101.25px;
 }
 
-.tile6 {
+#tile6 {
   background-position: -187.5px -101.25px;
 }
 
-.tile7 {
+#tile7 {
   background-position: -375px -101.25px;
 }
 
-.tile8 {
+#tile8 {
   background-position: -562.5px -101.25px;
 }
 
-.tile9 {
+#tile9 {
   background-position: 0 -202.5px;
 }
 
-.tile10 {
+#tile10 {
   background-position: -187.5px -202.5px;
 }
 
-.tile11 {
+#tile11 {
   background-position: -375px -202.5px;
 }
 
-.tile12 {
+#tile12 {
   background-position: -562.5px -202.5px;
 }
 
-.tile13 {
+#tile13 {
   background-position: 0 -303.75px;
 }
 
-.tile14 {
+#tile14 {
   background-position: -187.5px -303.75px;
 }
 
-.tile15 {
+#tile15 {
   background-position: -375px -303.75px;
 }
 
-.tile16 {
+#tile16 {
   background-position: -562.5px -303.75px;
 }
 

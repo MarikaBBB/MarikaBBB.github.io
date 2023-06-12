@@ -50,3 +50,7 @@ Throughout the development process, I tested the code multiple times:
 - Test user interactions thoroughly and ensure the data is updated and displayed correctly.
 
 
+To view the live site, visit the GitHub Pages: 
+https://marikabbb.github.io/MovieData/index.html
+
+

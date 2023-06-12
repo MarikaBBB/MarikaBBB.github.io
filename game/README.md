@@ -1,12 +1,12 @@
 Sliding Puzzle Game
-This is a web-based slide puzzle game built using HTML, CSS, and JavaScript. The game is inspired by japanese anime characters, and it features an image from Studio Ghibli as the puzzle background. The goal of the game is to arrange the tiles in the correct order within a specified number of moves or within a time limit.
+This is a web-based puzzle game built using HTML, CSS, and JavaScript. The game is inspired by japanese anime characters, and it features an image from Studio Ghibli as the puzzle background. The goal of the game is to arrange the tiles in the correct order within a specified number of moves or within a time limit.
 
 
 Game Preview
-To see a live demo of the slide puzzle game, you can visit this link: https://marikabbb.github.io/game/index.html 
+To see a live demo of the puzzle game, you can visit this link: https://marikabbb.github.io/game/index.html 
 
 How the Puzzle Works
-- To play the Sliding Puzzle Game, follow these steps:
+- To play the Puzzle Game, follow these steps:
 - Access the game by opening the index.html file in a web browser.
 - The game will start automatically, and you will see a grid of shuffled tiles.
 - Click and drag a tile to move it to an adjacent empty space.

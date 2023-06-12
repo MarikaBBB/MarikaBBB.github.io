@@ -18,4 +18,4 @@ Another challenge was ensuring that the gallery looked good on mobile devices. I
 
 To fix this issue, I had to modify the CSS styles for the cards and gallery container. I had to adjust the width and height of the cards and also add media queries to ensure that the cards resized properly on different screen sizes. I also had to adjust the spacing between the cards to ensure that they did not overlap on smaller screens.
 
-To view the live site, visit the GitHub Pages link here. 
+To view the live site, visit the GitHub Pages: https://marikabbb.github.io/gallery/index.html
