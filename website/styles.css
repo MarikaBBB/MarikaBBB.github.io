@@ -1,0 +1,96 @@
+#project-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.project-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.project-container {
+  width: 300px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-content {
+  background-color: lightblue;
+  border: 1px solid lightblue;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.project-container .box-image {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid black;
+  height: 200px;
+}
+
+.project-container .box-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-container:hover .overlay {
+  opacity: 1.5;
+}
+
+.project-container .overlay a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.project-container .text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.textT {
+  text-align: center;
+}
+
+.current-projects-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.past-projects-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current-projects-container .project-container,
+.past-projects-container .project-container {
+  margin: 10px;
+  flex: 0 0 30%;
+}
+
+
