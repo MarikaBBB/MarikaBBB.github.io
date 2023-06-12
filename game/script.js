@@ -11,16 +11,16 @@ function startTimer() {
     // Check if the time limit has been reached
     if (timerSeconds >= 180) { // 3 minutes * 60 seconds = 180 seconds
       stopTimer();
-      alert("Game over! You have reached the time limit.");
       clearInterval(timerInterval);
+      setTimeout(function () {
+        alert("Game over! You have reached the time limit.");
+      }, 0);
     }
   }, 1000);
 }
 
 // Function to shuffle the tiles randomly
 function shuffle() {
-  startTimer();
-
   var grid = document.getElementById("grid");
   var tiles = grid.getElementsByClassName("tile");
 
@@ -28,7 +28,7 @@ function shuffle() {
   var tileValues = [];
   for (var i = 0; i < tiles.length; i++) {
     tileValues.push(parseInt(tiles[i].getAttribute("data-value")));
-    tiles[i].addEventListener("dragstart", drag); 
+    tiles[i].addEventListener("dragstart", drag);
   }
 
   // Shuffle the tile values
@@ -43,8 +43,8 @@ function shuffle() {
   for (var k = 0; k < tiles.length; k++) {
     tiles[k].setAttribute("data-value", tileValues[k]);
     tiles[k].style.order = tileValues[k];
-    tiles[k].addEventListener("drop", drop); 
-    tiles[k].addEventListener("dragover", allowDrop); 
+    tiles[k].addEventListener("drop", drop);
+    tiles[k].addEventListener("dragover", allowDrop);
   }
 
   // Reset moves count and timer
@@ -52,8 +52,10 @@ function shuffle() {
   resetTimer();
 }
 
-// Add an event listener to button "New ame"
+// Add an event listener to button "New game"
 document.getElementById("shuffle-button").addEventListener("click", function() {
+  // Call startTimer only when the "New Game" button is clicked
+  startTimer();
   shuffle();
 });
 
@@ -109,9 +111,30 @@ function drop(event) {
     }
 
     // Check if the puzzle is solved
-    if (isPuzzleSolved()) {
-      return; // Return early to prevent further moves after the puzzle is solved
+    checkTilesOrder();
+  }
+}
+
+// Function to check if the tiles are in the correct order
+function checkTilesOrder() {
+  var grid = document.getElementById("grid");
+  var tiles = grid.getElementsByClassName("tile");
+  var isCorrectOrder = true;
+
+  for (var i = 0; i < tiles.length; i++) {
+    var tileOrder = parseInt(tiles[i].style.order);
+
+    if (tileOrder !== i) {
+      isCorrectOrder = false;
+      break;
     }
+  }
+
+  if (isCorrectOrder && tiles.length > 0) {
+    // Puzzle is solved
+    stopTimer();
+    alert("Congratulations! You solved the puzzle!");
+    solved = true;
   }
 }
 
@@ -128,26 +151,6 @@ function getEmptyTileValue() {
   }
 
   return -1; // Return -1 if empty tile is not found (error case)
-}
-
-// Function to check if the puzzle is solved
-function isPuzzleSolved() {
-  var grid = document.getElementById("grid");
-  var tiles = grid.getElementsByClassName("tile");
-
-  for (var i = 0; i < tiles.length; i++) {
-    var tileValue = parseInt(tiles[i].getAttribute("data-value"));
-    if (tileValue !== i) {
-      return false;
-    }
-    
-  }
-
-  // Stop the timer and show win notification
-  stopTimer();
-  alert("Congratulations! You solved the puzzle!");
-
-  return true;
 }
 
 // Timer functionality
