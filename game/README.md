@@ -1,4 +1,4 @@
-Sliding Puzzle Game
+PUZZLE GAME
 This is a web-based puzzle game built using HTML, CSS, and JavaScript. The game is inspired by japanese anime characters, and it features an image from Studio Ghibli as the puzzle background. The goal of the game is to arrange the tiles in the correct order within a specified number of moves or within a time limit.
 
 
