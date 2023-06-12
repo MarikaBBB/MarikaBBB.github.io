@@ -1,11 +1,11 @@
-PUZZLE GAME
+# PUZZLE GAME
 This is a web-based puzzle game built using HTML, CSS, and JavaScript. The game is inspired by japanese anime characters, and it features an image from Studio Ghibli as the puzzle background. The goal of the game is to arrange the tiles in the correct order within a specified number of moves or within a time limit.
 
 
-Game Preview
+## Game Preview
 To see a live demo of the puzzle game, you can visit this link: https://marikabbb.github.io/game/index.html 
 
-How the Puzzle Works
+### How the Puzzle Works
 - To play the Puzzle Game, follow these steps:
 - Access the game by opening the index.html file in a web browser.
 - The game will start automatically, and you will see a grid of shuffled tiles.
@@ -17,7 +17,7 @@ How the Puzzle Works
 - Click the "Instructions" button to view the game instructions in a modal window.
 
 
-Features:
+### Features:
 - Each tile represents a part of an image from a Ghibli movie. 
 - Interactive tile dragging and dropping mechanism for rearranging tiles
 - Randomized tile shuffling at the start of each game
@@ -29,14 +29,14 @@ Features:
 - Modal with game instructions accessible from the main menu
 
 
-Future implementations:
+### Future implementations:
 - Be mobile responsive.
 - Add event touch to play on mobile phone and iPad.
 - Make the game more engaging by adding additional levels with different images and increasing difficulty.
 - Add sound effects.
 - Implement a scoring system based on the number of moves or time taken to solve the puzzle, allowing players to compete for high scores.
 
-Challenges and Debugging
+### Challenges and Debugging
 During the development of this game, I encountered several challenges and performed debugging to ensure smooth functionality. Here are the challenges I faced and how I addressed them:
 
 1- Shuffling the image into tiles: Initially, I attempted to shuffle the image into tiles programmatically using JavaScript. However, I encountered difficulties in properly randomizing the tiles. After exploring different approaches, I decided to handle the shuffling in CSS. By assigning different order values to the tiles in the CSS styles, I achieved a visually shuffled puzzle. This simplified the logic and futher step in JavaScript. 
@@ -51,11 +51,11 @@ During the development of this game, I encountered several challenges and perfor
 
 6- Timer speed on page load: I observed that the timer appeared to run at a normal speed when the page initially loaded, but it became faster after clicking the "New Game" button. Upon investigation, I realized that the timer interval duration needed adjustment. By fine-tuning the interval duration in the startTimer() function, I ensured that the timer maintained a consistent speed throughout the game, regardless of when it was started.
 
-Debugging Process
+### Debugging Process
 I carefully reviewed the code logic, inspected variables, and setted breakpoints in the IDE. Additionally, I used the google inpector and closely monitored the browser console for any error messages or unexpected behavior.
 
-Credits
+### Credits
 This slide puzzle was built with the help of two tutorials: https://www.youtube.com/watch?v=sD3Os4H_EOU and https://www.youtube.com/watch?v=S6GNtMGNcUE. However, instead of creating the individual tiles dynamically using JavaScript, the image was divided into tiles using CSS. The background image used in the puzzle is sourced from Studio Ghibli, obtained through their website's free download option.
 
-Conclusion
+### Enjoy :D
 Enjoy playing the slide puzzle game and have fun arranging the tiles! Feel free to provide any feedback or suggestions for improvement.
