@@ -1,113 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Marika's founders & coders portfolio</title>
-    <link rel="icon" href="/favicon.ico">
-    <link rel="stylesheet" href="/my-styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
-    <meta name="description" content="My web page is a playground for me to learn about web concepts">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Marika's Founders & Coders Portfolio</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+  <meta name="description" content="My web page is a playground for me to learn about web concepts">
+</head>
 
-  <body>
-    <!-- Header Section -->
-    <div class="topnav">
-      <a href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#project">Projects</a>
-      <a href="#testimonial">Testimonials</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <!-- End of Header Section -->
+<body>
+  <!-- Header Section -->
+  <nav class="topnav">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <!-- End of Header Section -->
 
-    <!-- Title Section -->
-    <section id="title-section">
-      <h1>Welcome to Marika's portfolio</h1>
-    </section>
-    <!-- End of Title Section -->
+  <!-- Title Section -->
+  <section id="title-section">
+    <h1>Welcome to Marika's Portfolio</h1>
+  </section>
+  <!-- End of Title Section -->
 
-    <!-- Quote Section -->
-    <section id="quote-section">
-      <blockquote>
-        <p>"Success is the sum of small efforts - repeated day in and day out."</p>
-        <p>Robert Collier</p>
-      </blockquote>
-    </section>
-    <!-- End of Quote Section -->
+  <!-- Quote Section -->
+  <section id="quote-section">
+    <blockquote>
+      <p>"Success is the sum of small efforts - repeated day in and day out."</p>
+      <p>Robert Collier</p>
+    </blockquote>
+  </section>
+  <!-- End of Quote Section -->
 
-    <!-- About Me Section -->
-    <section id="about-section">
-      <h2>About Me</h2>
-      <!-- Insert about content here -->
-    </section>
-    <!-- End of About Me Section -->
+  <!-- About Me Section -->
+  <section id="about-section">
+    <h2>About Me</h2>
+    <!-- Insert about content here -->
+  </section>
+  <!-- End of About Me Section -->
 
-    <!-- Gallery Section -->
-    <section id="gallery-section">
-      <h2>My learning journey through challenges and projects</h2>
-      <div class="project-gallery">
-        <div class="cards">
-          <div class="image-wrapper">
-            <img src="./projects-images/codewars.png" alt="Photo of codewars's logo for the practices JavaScript for Founders & Coders application" class="image">
-            <div class="overlay">
-              <div class="text">Practice JavaScript: CODEWARS</div>
-            </div>
-          </div>
-          <div class="image-wrapper">
-            <img src="./projects-images/website.jpeg" alt="Photo of my website for Founders & Coders application" class="image">
-            <div class="overlay">
-              <div class="text">Project One: Personal Website's Portfolio</div>
-            </div>
-          </div>
-          <div class="image-wrapper">
-            <img src="./projects-images/game.jpeg" alt="Photo of puzzle game as project for Founders & Coders application" class="image">
-            <div class="overlay">
-              <div class="text">Project Two: Game</div>
-            </div>
-          </div>
-          <div class="image-wrapper">
-            <img src="./projects-images/bookshelves.jpeg" alt="Photo of hobby page as project number one for Founders & Coders application" class="image">
-            <div class="overlay">
-              <div class="text">Project One: Hobby Page</div>
-            </div>
-          </div>
-          <div class="image-wrapper">
-            <img src="./projects-images/galleryProjects.jpeg" alt="Photo of gallery projects as project number two for Founders & Coders application" class="image">
-            <div class="overlay">
-              <div class="text">Project Two: Gallery Page</div>
-            </div>
-          </div>
-          <div class="image-wrapper">
-            <img src="./projects-images/MovieDatabase.jpeg" alt="Photo of MovieData page as project number three for Founders & Coders application" class="image">
-            <div class="overlay">
-              <div class="text">Project Three: MovieDatabase</div>
-            </div>
+  <!-- Gallery Section -->
+  <h2>My Learning Journey Through Challenges and Projects</h2>
+  <section id="project-sections">
+    
+
+      <!-- Current Projects -->
+      <div class="project-section current-projects-container"></div>
+      <div class="project-container">
+        <div class="box-image">
+          <img src="./projects-images/codewars.png" alt="Codewars logo for practicing JavaScript" class="image"> 
+          <div class="overlay">
+            <a href="https://www.codewars.com/users/MarrrB">Visit my CODEWARS profile</a>
           </div>
         </div>
-        <div class="project-links">
-          <a href="./hobby/index.html">Visit the hobby project</a>
-          <a href="./gallery/index.html">Visit the gallery project</a>
-          <a href="./MovieData/index.html">Visit the MovieData project</a>
-          <a href="./game/index.html">Visit the Game project</a>
-        </div>
+        <div class="text">Practice JavaScript: CODEWARS</div>
       </div>
-    </section>
+  
+      <div class="project-container">
+        <div class="box-image">
+          <img src="./projects-images/website.jpeg" alt="Photo of my website" class="image">
+          <div class="overlay">
+            <div class="text">You are in my Website's Portfolio</div>
+          </div>
+        </div>
+        <div class="text">Project One: Personal Website's Portfolio</div>
+      </div>
+  
+      <div class="project-container">
+        <div class="box-image">
+          <img src="./projects-images/game.jpeg" alt="Photo of a puzzle game project" class="image">
+          <div class="overlay">
+            <a href="./game/index.html">Visit the Game project</a>
+          </div>
+        </div>
+        <div class="text">Project Two: Game</div>
+      </div>
+  </section>
+      
+      <h2>Past Projects</h2>
+      <!-- Past Projects -->
+      <section id="project-sections">
+      <div class="project-section past-projects-container"></div>
+      <div class="project-container">
+        <div class="box-image">
+          <img src="./projects-images/bookshelves.jpeg" alt="Photo of a hobby page project" class="image">
+          <div class="overlay">
+            <a href="./hobby/index.html">Visit the Hobby project</a> 
+          </div>
+        </div>
+        <div class="text">Project One: Hobby Page</div>
+      </div>
+  
+      <div class="project-container">
+        <div class="box-image">
+          <img src="./projects-images/galleryProjects.jpeg" alt="Photo of a gallery projects page project" class="image">
+          <div class="overlay">
+            <a href="./gallery/index.html">Visit the Gallery project</a> 
+          </div>
+        </div>
+        <div class="text">Project Two: Gallery Page</div>
+      </div>
+  
+      <div class="project-container">
+        <div class="box-image">
+          <img src="./projects-images/MovieDatabase.jpeg" alt="Photo of a MovieData page project" class="image">
+          <div class="overlay">
+            <a href="./MovieData/index.html">Visit the MovieData project</a>
+          </div>
+        </div>
+        <div class="text">Project Three: MovieDatabase</div>
+      </div>
+      </section>
     <!-- End of Gallery Section -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonial-section">
-      <h2>Testimonials</h2>
-      <!-- Insert your testimonials here -->
-    </section>
-    <!-- End of Testimonials Section -->
+  <!-- Testimonials Section -->
+  <section id="testimonials-section">
+    <h2>Testimonials</h2>
+    <!-- Insert your testimonials here -->
+  </section>
+  <!-- End of Testimonials Section -->
 
-    <!-- Footer Section -->
-    <footer id="footer">
-      <h2>&copy; Author: Marika Bertelli 2023</h2>
-      <p class="date"></p>
-    </footer>
-    <!-- End of Footer Section -->
-    <script src="/my-script.js"></script>
-  </body>
+  <!-- Footer Section -->
+  <footer id="footer">
+    <h2>&copy; Author: Marika Bertelli 2023</h2>
+    <p class="date"></p>
+  </footer>
+  <!-- End of Footer Section -->
+  
+  <script src="/my-script.js"></script>
+</body>
 </html>
+
+
