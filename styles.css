@@ -1,8 +1,104 @@
+body {
+  margin: 0; /* Remove default margin */
+}
+
+/*Header and Title Section */
+.topnav {
+  background-image: linear-gradient(to top, #237f5e 100%,  #08452c 0%); 
+  padding: 10px;
+  margin: 0;
+}
+
+.topnav a {
+  font-size: 22px;
+  font-weight: bold;
+  color: #feffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#title-section {
+  background-image: linear-gradient(to top, #08452c 0%, #237f5e 100%);
+  margin: 0;
+  padding: 180px; /* Increase the padding to make the section taller */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Move the title to the right side */
+  align-items: flex-start; /* Center the content vertically */
+}
+
+#title-section h1 {
+  color: white;
+  -webkit-text-stroke: 1px whitesmoke;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 52px;
+  text-transform: uppercase;
+  display: flex;
+  text-align: right;
+  margin: 0 0 10px 0; /* Add margin-bottom to create space */
+  order: -1; /* Set order to -1 to move it to the top */
+}
+
+#title-section h2 {
+  color: white;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 0; 
+  order: 2; 
+  -webkit-text-stroke: 1px whitesmoke;
+}
+
+/* Quote Section */
+#quote-section {
+  /*background-color: #FDF1E7;*/
+  background-color: #FAF0DC;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#quote-section blockquote {
+  margin: 0; /* Remove default margin */
+  font-size: 24px;
+  font-family: "Helvetica Neue", Arial, sans-serif; 
+  color: #0b5734; 
+}
+
+#quote-section blockquote p:first-child {
+  margin-bottom: 10px; /* Add spacing between the two paragraphs */
+}
+
 #project-sections {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  background-color: #0b5734;
+   padding: 10px;
+   margin: 0;
+   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+#current-projects-title {
+  background-color: #0b5734;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  box-shadow: 0 -3px 3px -2px rgba(0, 0, 0, 0.5);
+}
+
+#past-projects-title {
+  background-color: #0b5734;
+  padding: 10px;
+  margin: 0;
+  color: white;
   text-align: center;
 }
 
@@ -21,11 +117,20 @@
 }
 
 .container-content {
-  background-color: lightblue;
-  border: 1px solid lightblue;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 10px;
+  position: relative;
+  overflow: hidden;
+  background-clip: padding-box;
+  background-image: rgba(53, 172, 128, 0);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+h4 {
+  color: whitesmoke;
+  -webkit-text-stroke: 0.5px whitesmoke;
+}
+
 
 .project-container .box-image {
   position: relative;
@@ -56,7 +161,7 @@
 }
 
 .project-container:hover .overlay {
-  opacity: 1.5;
+  opacity: 3;
 }
 
 .project-container .overlay a {
@@ -93,4 +198,39 @@
   flex: 0 0 30%;
 }
 
+.topnav a,
+.container-content a {
+  text-decoration: none;
+}
 
+#testimonials-section {
+  background-color: #FFDC82 
+}
+
+#footer {
+  background-image: linear-gradient(to top, #08452c 90%, #237f5e 100% );
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer h2 {
+  color: white;
+}
+
+#about-section {
+  background-color: #FAF0DC;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#testimonials-section {
+  background-color: #FAF0DC;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
