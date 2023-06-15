@@ -78,14 +78,15 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #0b5734;
+  background-color: #196B4B;
+  /*#0b5734;*/
    padding: 10px;
    margin: 0;
    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
 }
 
 #current-projects-title {
-  background-color: #0b5734;
+  background-color: #196B4B;
   text-align: center;
   padding: 10px;
   margin: 0;
@@ -95,11 +96,16 @@ body {
 }
 
 #past-projects-title {
-  background-color: #0b5734;
+  background-color: #196B4B;
   padding: 10px;
   margin: 0;
   color: white;
   text-align: center;
+}
+
+#current-projects-title h2,
+#past-projects-title {
+  font-size: 22px; 
 }
 
 .project-section {
@@ -160,12 +166,26 @@ h4 {
   transition: opacity 0.3s;
 }
 
-.project-container:hover .overlay {
-  opacity: 3;
+.project-container .overlay a.github-link {
+  color: white;
+  text-decoration: none;
+}
+
+.project-container .box-image:hover .overlay {
+  opacity: 1;
+}
+
+.github-link {
+  color: white;
+  text-decoration: none;
+}
+
+.github-link:active {
+  outline: none;
 }
 
 .project-container .overlay a {
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
@@ -208,7 +228,7 @@ h4 {
 }
 
 #footer {
-  background-image: linear-gradient(to top, #08452c 90%, #237f5e 100% );
+  background-image: linear-gradient(to top, #08452c 0%, #237f5e 100% );
   margin: 0;
   padding: 10px;
   display: flex;
@@ -233,4 +253,22 @@ h4 {
   padding: 10px;
   display: flex;
   flex-direction: column;
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 480px) {
+  /* Adjust the navigation */
+  .topnav {
+    text-align: center;
+  }
+  .topnav a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Adjust the title section */
+  #title-section {
+    text-align: center;
+    padding: 20px;
+  }
 }
