@@ -1,15 +1,18 @@
+/* Reset default margin */
 body {
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 /* Header and Title Section */
 .topnav {
+  /* Background gradient */
   background-image: linear-gradient(to top, #237f5e 100%, #08452c 0%);
   padding: 10px;
   margin: 0;
 }
 
 .topnav a {
+  /* Navigation links styling */
   font-size: 22px;
   font-weight: bold;
   color: #feffff;
@@ -19,6 +22,7 @@ body {
 }
 
 #title-section {
+  /* Title section styling */
   background-image: linear-gradient(to top, #08452c 0%, #237f5e 100%);
   margin: 0;
   padding: 180px; /* Increase the padding to make the section taller */
@@ -29,6 +33,7 @@ body {
 }
 
 #title-section h1 {
+  /* Main title styling */
   color: white;
   -webkit-text-stroke: 1px whitesmoke;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -41,6 +46,7 @@ body {
 }
 
 #title-section h2 {
+  /* Subtitle styling */
   color: white;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 32px;
@@ -53,6 +59,7 @@ body {
 
 /* Quote Section */
 #quote-section {
+  /* Quote section styling */
   background-color: #faf0dc;
   text-align: center;
   padding: 20px;
@@ -61,6 +68,7 @@ body {
 }
 
 #quote-section blockquote {
+  /* Quote styling */
   margin: 0; /* Remove default margin */
   font-size: 24px;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -72,6 +80,7 @@ body {
 }
 
 #learning-journey {
+  /* Learning journey section styling */
   background-color: #196B4B;
   text-align: center;
   padding: 10px;
@@ -82,6 +91,7 @@ body {
 }
 
 .carousel-container {
+  /* Carousel container styling */
   width: 100%;
   max-width: none;
   overflow: hidden;
@@ -89,16 +99,20 @@ body {
 }
 
 .carousel {
+  /* Carousel styling */
   display: flex;
   width: 300%;
   animation: carouselAnimation 50s infinite;
 }
 
 .project-container {
+  /* Individual project container styling */
   width: 300px;
   margin: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction
+
+: column;
 }
 
 .project-container:hover {
@@ -106,15 +120,18 @@ body {
 }
 
 .carousel .project-container {
-  width: 66.33%; /* Adjust the width based on the number of slides */
-  margin: 0; /* Remove the margin */
+  /* Adjust the width based on the number of slides */
+  width: 66.33%;
+  margin: 0;
 }
 
 .carousel .project-container:not(:first-child) {
-  margin-left: 0px; /* Adjust the margin space */
+  /* Adjust the margin space */
+  margin-left: 0px;
 }
 
 @keyframes carouselAnimation {
+  /* Carousel animation keyframes */
   0% {
     transform: translateX(0);
   }
@@ -124,6 +141,7 @@ body {
 }
 
 .container-content {
+  /* Container content styling */
   width: 250px;
   padding: 20px;
   margin-right: 40px;
@@ -136,11 +154,13 @@ body {
 }
 
 h4 {
+  /* Heading 4 styling */
   color: whitesmoke;
   -webkit-text-stroke: 0.5px whitesmoke;
 }
 
 .project-container .box-image {
+  /* Project container box image styling */
   position: relative;
   overflow: hidden;
   border: 1px solid black;
@@ -148,12 +168,14 @@ h4 {
 }
 
 .project-container .box-image img {
+  /* Project container box image styling */
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .project-container .overlay {
+  /* Overlay styling */
   position: absolute;
   top: 0;
   left: 0;
@@ -169,6 +191,7 @@ h4 {
 }
 
 .project-container .overlay a.github-link {
+  /* GitHub link styling */
   color: white;
   text-decoration: none;
 }
@@ -178,16 +201,19 @@ h4 {
 }
 
 .github-link {
+  /* GitHub link styling */
   color: white;
   text-decoration: none;
 }
 
 .project-container .overlay a {
+  /* Overlay link styling */
   color: white;
   text-decoration: none;
 }
 
 .project-container .text {
+  /* Project container text styling */
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -197,19 +223,23 @@ h4 {
 }
 
 .textT {
+  /* Centered text styling */
   text-align: center;
 }
 
 .topnav a,
 .container-content a {
+  /* Navigation and container content links styling */
   text-decoration: none;
 }
 
 #testimonials-section {
+  /* Testimonials section styling */
   background-color: #ffdc82;
 }
 
 #footer {
+  /* Footer styling */
   background-image: linear-gradient(to top, #08452c 0%, #237f5e 100%);
   margin: 0;
   padding: 10px;
@@ -219,23 +249,29 @@ h4 {
 }
 
 .contact-section {
+  /* Contact section styling */
   display: flex;
   align-items: center;
 }
 
 .contact-section h2 {
+  /* Contact section heading styling */
   font-size: 42px;
   font-weight: 700;
   margin-right: 10px;
 }
 
 .footer-content {
-  display: flex;
+  /* Footer content styling */
+  display: flex
+
+;
   justify-content: space-between;
   align-items: flex-start;
 }
 
 .left-section {
+  /* Left section styling */
   flex: 1;
   display:flex;
   flex-direction: column;
@@ -243,12 +279,14 @@ h4 {
 }
 
 .feedback-text {
+  /* Feedback text styling */
   white-space: pre-line;
   font-size: 22px;
   margin-top: auto;
 }
 
 .feedback-form {
+  /* Feedback form styling */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,6 +294,7 @@ h4 {
 }
 
 .feedback-form textarea {
+  /* Feedback form textarea styling */
   width: 90%;
   max-width: 300px;
   height: auto;
@@ -265,6 +304,7 @@ h4 {
 }
 
 .feedback-form input[type="submit"] {
+  /* Feedback form submit button styling */
   margin-top: 10px;
   padding: 6px 12px;
   font-size: 14px;
@@ -279,12 +319,14 @@ h4 {
 }
 
 .right-section {
+  /* Right section styling */
   color: white;
   text-align: right;
   margin-top: auto;
 }
 
 #about-section {
+  /* About section styling */
   background-color: #faf0dc;
   margin: 0;
   padding: 10px;
@@ -293,13 +335,13 @@ h4 {
 }
 
 #testimonials-section {
+  /* Testimonials section styling */
   background-color: #faf0dc;
   margin: 0;
   padding: 10px;
   display: flex;
   flex-direction: column;
 }
-
 
 /* Mobile Portrait */
 @media only screen and (max-width: 480px) {
