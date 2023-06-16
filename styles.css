@@ -90,55 +90,60 @@ body {
   box-shadow: 0 -3px 3px -2px rgba(0, 0, 0, 0.5);
 }
 
+/* Carousel Section */
 .carousel-container {
   /* Carousel container styling */
   width: 100%;
-  max-width: none;
   overflow: hidden;
   background-color: #196b4b;
+  position: relative;
+}
+
+.carousel-wrapper {
+  /* Carousel wrapper styling */
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: calc(100% * 6); /* Adjust the width based on the number of projects */
+  transform: translateX(-100%); /* Adjust the translation based on the number of projects */
+}
+
+.carousel .project-container:last-child {
+  margin-right: 0; /* Set the margin-right to 0 for the last project container */
+}
+
+.carousel .project-container:first-child {
+  margin-left: 20px; /* Remove the margin-left from the first project container */
 }
 
 .carousel {
   /* Carousel styling */
-  display: flex;
-  width: 300%;
-  animation: carouselAnimation 50s infinite;
+  width: 100%;
+  overflow: hidden;
 }
 
 .project-container {
   /* Individual project container styling */
-  width: 300px;
+  flex: 0 0 calc(100% / 3);
   margin: 20px;
   display: flex;
-  flex-direction
-
-: column;
-}
-
-.project-container:hover {
-  opacity: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel .project-container {
-  /* Adjust the width based on the number of slides */
-  width: 66.33%;
-  margin: 0;
+  /* Individual project container styling */
+  flex: 0 0 300px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .carousel .project-container:not(:first-child) {
   /* Adjust the margin space */
-  margin-left: 0px;
+  margin-left: 0;
 }
 
-@keyframes carouselAnimation {
-  /* Carousel animation keyframes */
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-66.66%); /* Adjust the translateX value based on the number of slides */
-  }
-}
 
 .container-content {
   /* Container content styling */
@@ -152,6 +157,29 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+.arrow-navigation {
+  /* Arrow navigation container styling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.prev-button,
+.next-button {
+  /* Arrow button styling */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 48px;
+  color: white;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #196b4b;
+}
+
 
 h4 {
   /* Heading 4 styling */
@@ -246,12 +274,15 @@ h4 {
   display: flex;
   flex-direction: column;
   color: white;
+  align-items: center;
+  text-align: center;
 }
 
 .contact-section {
   /* Contact section styling */
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .contact-section h2 {
@@ -263,17 +294,15 @@ h4 {
 
 .footer-content {
   /* Footer content styling */
-  display: flex
-
-;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .left-section {
   /* Left section styling */
   flex: 1;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
@@ -290,7 +319,11 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -150px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feedback-form textarea {
@@ -313,7 +346,7 @@ h4 {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  order: 2; 
+  order: 2;
   height: auto;
   width: 100px;
 }
@@ -322,7 +355,9 @@ h4 {
   /* Right section styling */
   color: white;
   text-align: right;
-  margin-top: auto;
+  padding-left: 80%;
+  font-size: 22px;
+  align-self: flex-end;
 }
 
 #about-section {
