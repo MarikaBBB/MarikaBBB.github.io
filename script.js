@@ -1,58 +1,52 @@
-// Select all carousel containers
-const carouselContainers = document.querySelectorAll('.carousel-container');
+// Get the necessary elements
+const carouselWrapper = document.querySelector('.carousel-wrapper');
+const projectContainers = document.querySelectorAll('.project-container');
 
-// Loop through each carousel container
-carouselContainers.forEach(container => {
-  // Get carousel and project elements within the container
-  const carousel = container.querySelector('.carousel');
-  const projects = container.querySelectorAll('.project-container');
+// Duplicate project containers and append them to the carousel wrapper
+const duplicatedContainers = Array.from(projectContainers).map(container => container.cloneNode(true));
+duplicatedContainers.forEach(container => carouselWrapper.appendChild(container));
 
-  // Calculate project and carousel width and count
-  const projectWidth = projects[0].offsetWidth;
-  const carouselWidth = carousel.offsetWidth;
-  const projectsCount = projects.length;
+// Set the initial slide index
+let slideIndex = 0;
+const slideWidth = projectContainers[0].offsetWidth + parseInt(getComputedStyle(projectContainers[0]).marginRight);
+const totalSlides = projectContainers.length;
 
-  let currentPosition = 0;
+// Initialize the carousel position
+carouselWrapper.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0, 0)`;
 
-  // Function to animate the carousel
-  const animateCarousel = () => {
-    carousel.style.transform = `translateX(-${currentPosition}px)`;
-  };
+// Function to move the carousel to the next slide
+function nextSlide() {
+  slideIndex++;
+  carouselWrapper.style.transition = 'transform 0.5s ease-in-out';
+  carouselWrapper.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0, 0)`;
 
-  // Function to slide the carousel to the right
-  const slideRight = () => {
-    currentPosition += projectWidth;
-    if (currentPosition > (projectsCount - 1) * projectWidth) {
-      currentPosition = 0;
-    }
-    animateCarousel();
-  };
+  // Move to the first slide instantly when reaching the cloned last slide
+  if (slideIndex === totalSlides) {
+    setTimeout(() => {
+      carouselWrapper.style.transition = 'none';
+      carouselWrapper.style.transform = `translate3d(0, 0, 0)`;
+      slideIndex = 0;
+    }, 500);
+  }
+}
 
-  // Function to slide the carousel to the left
-  const slideLeft = () => {
-    currentPosition -= projectWidth;
-    if (currentPosition < 0) {
-      currentPosition = (projectsCount - 1) * projectWidth;
-    }
-    animateCarousel();
-  };
+// Function to move the carousel to the previous slide
+function prevSlide() {
+  if (slideIndex === 0) {
+    slideIndex = totalSlides;
+    carouselWrapper.style.transition = 'none';
+    carouselWrapper.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0, 0)`;
+  }
 
-  // Set interval to automatically slide the carousel to the right every 5 seconds
-  setInterval(slideRight, 5000);
+  slideIndex--;
+  carouselWrapper.style.transition = 'transform 0.5s ease-in-out';
+  carouselWrapper.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0, 0)`;
+}
 
-  // Set the animation duration of the carousel
-  document.querySelector('.carousel').style.animationDuration = '40s';
+// Get the arrow navigation elements
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
 
-  // Pause the carousel animation on mouseenter
-  container.addEventListener('mouseenter', () => {
-    carousel.style.animationPlayState = 'paused';
-  });
-
-  // Resume the carousel animation on mouseleave
-  container.addEventListener('mouseleave', () => {
-    carousel.style.animationPlayState = 'running';
-  });
-});
-
-
-
+// Add click event listeners to the arrow navigation buttons
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
