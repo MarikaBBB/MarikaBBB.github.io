@@ -1,3 +1,7 @@
+* {
+  font-family: 'Playfair Display', serif;
+}
+
 /* Reset default margin */
 body {
   margin: 0;
@@ -172,7 +176,7 @@ body {
   cursor: pointer;
   font-size: 48px;
   color: white;
-  margin: -10px 10px 5px; /* Adjust the margin value as desired */
+  margin: -10px 10px 5px;
   padding: 5px 10px;
   border-radius: 2px;
   background-color: #196b4b;
@@ -186,7 +190,6 @@ body {
 
 h4 {
   /* Heading 4 styling */
-
   color: whitesmoke;
   -webkit-text-stroke: 0.5px whitesmoke;
 }
@@ -202,7 +205,10 @@ p {
   /* Paragraph styling */
   margin: 0;
   padding: 0;
+  font-size: 48;
 }
+
+
 
 .project-container .box-image {
   /* Project container box image styling */
