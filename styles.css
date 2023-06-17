@@ -208,8 +208,6 @@ p {
   font-size: 48;
 }
 
-
-
 .project-container .box-image {
   /* Project container box image styling */
   position: relative;
@@ -378,7 +376,6 @@ p {
   /* Right section styling */
   color: white;
   text-align: right;
-  padding-left: 80%;
   font-size: 22px;
   align-self: flex-end;
 }
