@@ -47,6 +47,7 @@ function prevSlide() {
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 
+
 // Add click event listeners to the arrow navigation buttons
 prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);
