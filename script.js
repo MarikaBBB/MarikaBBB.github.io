@@ -92,7 +92,34 @@ function resetAvatar() {
   avatar3.classList.add('hidden');
 }
 
+const avatar = document.getElementById('avatar1');
 const avatarContainer = document.getElementById('avatar-container');
-avatarContainer.addEventListener('click', animateAvatar);
-avatarContainer.addEventListener('mouseleave', resetAvatar);
 
+avatar.addEventListener('click', () => {
+  avatar.classList.toggle('animate');
+  animateAvatar(); // Call the animateAvatar function
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the position of the About Me section
+  const aboutSection = document.getElementById("about-section");
+  const aboutSectionTop = aboutSection.offsetTop;
+  const aboutSectionBottom = aboutSectionTop + aboutSection.offsetHeight;
+
+  // Get the speech bubble element
+  const speechBubble2 = document.getElementById("speech-bubble2");
+
+  // Function to check if the user is in the About Me section
+  function checkIfInAboutSection() {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll >= aboutSectionTop && currentScroll <= aboutSectionBottom) {
+      speechBubble2.classList.remove("hidden");
+    } else {
+      speechBubble2.classList.add("hidden");
+    }
+  }
+
+  // Add event listener for scroll event
+  window.addEventListener("scroll", checkIfInAboutSection);
+});

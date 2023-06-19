@@ -41,7 +41,7 @@ body {
   color: white;
   -webkit-text-stroke: 1px whitesmoke;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 52px;
+  font-size: 62px;
   text-transform: uppercase;
   display: flex;
   text-align: right;
@@ -88,7 +88,7 @@ body {
   text-align: center;
   padding: 10px;
   margin: 0;
-  font-size: 14px;
+  font-size: 26px;
   color: white;
   box-shadow: 0 -3px 3px -2px rgba(0, 0, 0, 0.5);
 }
@@ -284,7 +284,7 @@ p {
 
 #testimonials-section {
   /* Testimonials section styling */
-  background-color: #ffdc82;
+  background: linear-gradient(to right, #ffd4d8, #ffe8ea);
 }
 
 #footer {
@@ -376,13 +376,13 @@ p {
   /* Right section styling */
   color: white;
   text-align: right;
-  font-size: 20px;
+  font-size: 16px;
   align-self: flex-end;
 }
 
 #about-section {
   /* About section styling */
-  background-color: #faf0dc;
+  background: linear-gradient(to right, #ffd4d8, #ffe8ea);
   margin: 0;
   padding: 10px;
   display: flex;
@@ -398,8 +398,15 @@ p {
   flex-direction: column;
 }
 
+.about-title {
+  text-align: center;
+  font-size: 32px;
+  color: #08452c;
+}
+
 #avatar-container {
   position: relative;
+  left: 350px;
 }
 
 #avatar1,
@@ -457,11 +464,28 @@ p {
   }
 }
 
+.avatar {
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }
 
-#speech-bubble {
+animate {
+  animation: avatarAnimation 1s infinite alternate;
+}
+
+@keyframes avatarAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+#speech-bubble1 {
   position: absolute;
   top: 30px;
   left: 260px;
@@ -472,7 +496,7 @@ p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#speech-bubble:before {
+#speech-bubble1:before {
   content: '';
   position: absolute;
   top: 50%;
@@ -486,15 +510,47 @@ p {
   border-radius: 10px;
 }
 
+#speech-bubble2 {
+  position: absolute;
+  top: 150px;
+  left: 260px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
-#speech-bubble p {
+#speech-bubble1 p,
+#speech-bubble2 p {
   margin: 0;
   font-size: 16px;
   text-align: center;
   font-weight: bold;
+  color: #08452c;
+}
+
+.hidden {
+  display: none;
 }
 
 
+#start-story-btn {
+  padding: 15px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #08452c;
+  background-color: #ffbfc1;
+  border: 1px solid #ffbfc1;
+  border-radius: 4px;
+  cursor: pointer;
+  height: auto;
+  width: 200px;
+  margin-top: 60px;
+  margin-left: 60px;
+  text-align: center;
+}
 
 
 
