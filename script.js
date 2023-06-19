@@ -51,3 +51,48 @@ const nextButton = document.querySelector('.next-button');
 // Add click event listeners to the arrow navigation buttons
 prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);
+
+
+
+// Function to check if the element is in the viewport
+let isAnimating = false;
+
+function animateAvatar() {
+  if (isAnimating) {
+    return; // Prevent animation if it's already in progress
+  }
+  
+  isAnimating = true;
+
+  const avatar1 = document.getElementById('avatar1');
+  const avatar2 = document.getElementById('avatar2');
+  const avatar3 = document.getElementById('avatar3');
+
+  avatar1.classList.add('hidden');
+  avatar2.classList.remove('hidden');
+
+  setTimeout(() => {
+    avatar2.classList.add('hidden');
+    avatar3.classList.remove('hidden');
+  }, 800); 
+
+  setTimeout(() => {
+    resetAvatar();
+    isAnimating = false;
+  }, 2000); 
+}
+
+function resetAvatar() {
+  const avatar1 = document.getElementById('avatar1');
+  const avatar2 = document.getElementById('avatar2');
+  const avatar3 = document.getElementById('avatar3');
+
+  avatar1.classList.remove('hidden');
+  avatar2.classList.add('hidden');
+  avatar3.classList.add('hidden');
+}
+
+const avatarContainer = document.getElementById('avatar-container');
+avatarContainer.addEventListener('click', animateAvatar);
+avatarContainer.addEventListener('mouseleave', resetAvatar);
+
