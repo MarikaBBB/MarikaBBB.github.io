@@ -358,6 +358,7 @@ p {
   border: 1px solid #ccc;
   order: 1;
   padding-left: 10px;
+  padding-top: 10px;
 }
 
 .feedback-form input[type="submit"] {
@@ -562,7 +563,8 @@ animate {
   height: auto;
   width: 200px;
   margin-top: 60px;
-  margin-left: 60px;
+  margin-right: 35px;
+  margin-left: 25px;
   text-align: center;
   cursor: pointer;
 }
