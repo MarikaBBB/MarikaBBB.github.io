@@ -120,6 +120,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // Add event listener for scroll event
+  // Event listener for scroll event
   window.addEventListener("scroll", checkIfInAboutSection);
 });
+
+
+// Event listener to the "Start My Story" button
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('start-story-btn').addEventListener('click', function() {
+    document.getElementById('image-map-section').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
