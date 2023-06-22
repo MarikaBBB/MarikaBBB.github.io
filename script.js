@@ -132,6 +132,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Initialize flag icons and close buttons
+const flagIcons = document.querySelectorAll('.flag-icon');
+const closeButtons = document.querySelectorAll('.popup .close');
+
 // Function to open the hover box
 function openHoverBox(country) {
   const hoverBox = document.querySelector('.hover-box');
@@ -173,6 +177,13 @@ function openHoverBox(country) {
   hoverBox.style.opacity = '1';
   hoverBox.style.visibility = 'visible';
   hoverBox.style.top = '0';
+
+  // Add event listener to close the hover box
+  hoverBox.addEventListener('click', function (event) {
+    if (event.target === hoverBox) {
+      closeHoverBox();
+    }
+  });
 }
 
 // Function to close the hover box
@@ -185,21 +196,12 @@ function closeHoverBox() {
   hoverBox.style.top = '-100px';
 }
 
-// Add event listeners to the flag icons
-const flagIcons = document.querySelectorAll('.flag-icon');
-flagIcons.forEach(function (flagIcon) {
-  flagIcon.addEventListener('click', function () {
-    const country = this.getAttribute('data-country');
-    openHoverBox(country);
-  });
-});
-
 // Close the hover box when clicking outside it
 document.addEventListener('click', function (event) {
   const hoverBox = document.querySelector('.hover-box');
   const targetElement = event.target;
 
-  if (!hoverBox.contains(targetElement) && !flagIcons.includes(targetElement)) {
+  if (!hoverBox.contains(targetElement) && !Array.from(flagIcons).includes(targetElement)) {
     closeHoverBox();
   }
 });
@@ -211,25 +213,28 @@ function openPopup(country) {
 }
 
 // Function to close the pop-up window
-function closePopup(country) {
-  const popup = document.querySelector(`.popup[data-country="${country}"]`);
-  popup.classList.remove('show');
+function closePopup() {
+  const openPopup = document.querySelector('.popup.show');
+  if (openPopup) {
+    openPopup.classList.remove('show');
+  }
 }
 
 // Add event listeners to the flag icons
 flagIcons.forEach(function (flagIcon) {
   flagIcon.addEventListener('click', function () {
     const country = this.getAttribute('data-country');
-    openPopup(country);
+    closePopup(); // Close any open pop-up windows
+    openPopup(country); // Open the selected pop-up window
   });
 });
 
 // Add event listeners to close buttons in pop-up windows
-const closeButtons = document.querySelectorAll('.popup .close');
 closeButtons.forEach(function (closeButton) {
   closeButton.addEventListener('click', function () {
-    const country = this.parentNode.getAttribute('data-country');
-    closePopup(country);
+    const popup = this.parentNode;
+    popup.classList.remove('show'); // Close the current pop-up window
   });
 });
+
 

@@ -588,20 +588,6 @@ animate {
   display: inline-block;
 }
 
-/*.map-wrapper .hover-box {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 200px;
-  padding: 10px;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, top 0.3s, visibility 0.3s;
-}*/
-
 .hover-box {
   position: absolute;
   top: -100px;
@@ -680,8 +666,20 @@ animate {
   display: block;
 }
 
+.popup h2,
+.popup p,
+.popup .close {
+  color: #08452c;
+}
 
-
+/* Close button style */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
 
 /* Mobile Portrait */
 @media only screen and (max-width: 480px) {
