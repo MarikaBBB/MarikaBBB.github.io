@@ -132,3 +132,104 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Function to open the hover box
+function openHoverBox(country) {
+  const hoverBox = document.querySelector('.hover-box');
+  const title = document.getElementById('location-title');
+  const description = document.getElementById('location-description');
+
+  // Set the title and description based on the selected country
+  switch (country) {
+    case 'Italy':
+      title.textContent = 'Italy';
+      description.textContent = 'Information about Italy.';
+      break;
+    case 'Ireland':
+      title.textContent = 'Ireland';
+      description.textContent = 'Information about Ireland.';
+      break;
+    case 'England':
+      title.textContent = 'England';
+      description.textContent = 'Information about England.';
+      break;
+    case 'Spain':
+      title.textContent = 'Spain';
+      description.textContent = 'Information about Spain.';
+      break;
+    case 'Japan':
+      title.textContent = 'Japan';
+      description.textContent = 'Information about Japan.';
+      break;
+    case 'England2':
+      title.textContent = 'England2';
+      description.textContent = 'Information about England2.';
+      break;
+    default:
+      title.textContent = '';
+      description.textContent = '';
+  }
+
+  // Show the hover box with animation
+  hoverBox.style.opacity = '1';
+  hoverBox.style.visibility = 'visible';
+  hoverBox.style.top = '0';
+}
+
+// Function to close the hover box
+function closeHoverBox() {
+  const hoverBox = document.querySelector('.hover-box');
+
+  // Hide the hover box with animation
+  hoverBox.style.opacity = '0';
+  hoverBox.style.visibility = 'hidden';
+  hoverBox.style.top = '-100px';
+}
+
+// Add event listeners to the flag icons
+const flagIcons = document.querySelectorAll('.flag-icon');
+flagIcons.forEach(function (flagIcon) {
+  flagIcon.addEventListener('click', function () {
+    const country = this.getAttribute('data-country');
+    openHoverBox(country);
+  });
+});
+
+// Close the hover box when clicking outside it
+document.addEventListener('click', function (event) {
+  const hoverBox = document.querySelector('.hover-box');
+  const targetElement = event.target;
+
+  if (!hoverBox.contains(targetElement) && !flagIcons.includes(targetElement)) {
+    closeHoverBox();
+  }
+});
+
+// Function to open the pop-up window
+function openPopup(country) {
+  const popup = document.querySelector(`.popup[data-country="${country}"]`);
+  popup.classList.add('show');
+}
+
+// Function to close the pop-up window
+function closePopup(country) {
+  const popup = document.querySelector(`.popup[data-country="${country}"]`);
+  popup.classList.remove('show');
+}
+
+// Add event listeners to the flag icons
+flagIcons.forEach(function (flagIcon) {
+  flagIcon.addEventListener('click', function () {
+    const country = this.getAttribute('data-country');
+    openPopup(country);
+  });
+});
+
+// Add event listeners to close buttons in pop-up windows
+const closeButtons = document.querySelectorAll('.popup .close');
+closeButtons.forEach(function (closeButton) {
+  closeButton.addEventListener('click', function () {
+    const country = this.parentNode.getAttribute('data-country');
+    closePopup(country);
+  });
+});
+

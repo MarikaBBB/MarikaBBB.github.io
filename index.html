@@ -57,38 +57,70 @@
 <!-- Image Map Section -->
 <section id="image-map-section">
   <div id="image-map-container">
-    <img src="Map.jpg" alt="Image Map" usemap="#flags-map">
+    <div class="map-wrapper">
+      <img src="Map.jpg" alt="Image Map" usemap="#flags-map">
+    </div>
     <map name="flags-map">
-      <area shape="rect" coords="978, 321, 1028, 371" alt="Italy" onclick="openPopIn('Italy')">
-      <area shape="rect" coords="867, 258, 917, 308" alt="Ireland" onclick="openPopIn('Ireland')">
-      <area shape="rect" coords="903, 261, 953, 311" alt="England" onclick="openPopIn('England')">
-      <area shape="rect" coords="873, 342, 923, 392" alt="Spain" onclick="openPopIn('Spain')">
-      <area shape="rect" coords="1779, 381, 1829, 431" alt="Japan" onclick="openPopIn('Japan')">
-      <area shape="rect" coords="903, 261, 953, 311" alt="England" onclick="openPopIn('England2')">
+      <area shape="rect" coords="978, 321, 1028, 371" alt="Italy" data-country="Italy">
+      <area shape="rect" coords="867, 258, 917, 308" alt="Ireland" data-country="Ireland">
+      <area shape="rect" coords="903, 261, 953, 311" alt="England" data-country="England">
+      <area shape="rect" coords="873, 342, 923, 392" alt="Spain" data-country="Spain">
+      <area shape="rect" coords="1779, 381, 1829, 431" alt="Japan" data-country="Japan">
+      <area shape="rect" coords="903, 261, 953, 311" alt="England2" data-country="England2">
     </map>
-    <div class="flag-icon italy" data-country="Italy" onclick="openPopIn('Italy')">
+    <div class="flag-icon italy" data-country="Italy">
       1🇮🇹
     </div>
-    <div class="flag-icon ireland" data-country="Ireland" onclick="openPopIn('Ireland')">
-      2🇮🇪
+    <div class="flag-icon ireland" data-country="Ireland">
+       2🇮🇪
     </div>
-    <div class="flag-icon england" data-country="England" onclick="openPopIn('England')">
+    <div class="flag-icon england" data-country="England">
       4🇬🇧
     </div>
-    <div class="flag-icon spain" data-country="Spain" onclick="openPopIn('Spain')">
+    <div class="flag-icon spain" data-country="Spain">
       3🇪🇸
     </div>
-    <div class="flag-icon japan" data-country="Japan" onclick="openPopIn('Japan')">
+    <div class="flag-icon japan" data-country="Japan">
       5🇯🇵
     </div>
-    <div class="flag-icon computer" data-country="computer" onclick="openPopIn('England2')"> 
-      6💻 </div>
+    <div class="flag-icon computer" data-country="England2">
+      6💻
+    </div>
   </div>
 </section>
 <!-- End of Image Map Section -->
 
+<!-- Popup Windows -->
+<div class="popup" data-country="Italy">
+  <h2>Italy</h2>
+  <p>Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum est eu est aliquet.</p>
+</div>
 
+<div class="popup" data-country="Ireland">
+  <h2>Ireland</h2>
+  <p>Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum est eu est aliquet.</p>
+</div>
 
+<div class="popup" data-country="England">
+  <h2>England</h2>
+  <p>Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum est eu est aliquet.</p>
+</div>
+
+<div class="popup" data-country="Spain">
+  <h2>Spain</h2>
+  <p>Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum est eu est aliquet.</p>
+</div>
+
+<div class="popup" data-country="Japan">
+  <h2>Japan</h2>
+  <p>Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum est eu est aliquet.</p>
+</div>
+
+<div class="popup" data-country="England2">
+  <h2>England2</h2>
+  <p>Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum est eu est aliquet.</p>
+</div>
+<!-- End of Popup Windows -->
 
 
 <!-- Section Title -->

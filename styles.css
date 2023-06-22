@@ -583,9 +583,44 @@ animate {
   display: flex;
 }
 
+.map-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/*.map-wrapper .hover-box {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 200px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, top 0.3s, visibility 0.3s;
+}*/
+
+.hover-box {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 200px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, top 0.3s, visibility 0.3s;
+}
+
 .flag-icon {
   position: absolute;
   z-index: 1;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Adjust the styles of the flag icons as needed */
@@ -615,10 +650,35 @@ animate {
 }
 
 .flag-icon[data-country="England2"] {
-  left: 44.8%;
-  top: 21.4%;
+  left: 45%;
+  top: 17.9%;
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup p {
+  margin-bottom: 0;
+}
+
+.popup.show {
+  display: block;
+}
 
 
 
