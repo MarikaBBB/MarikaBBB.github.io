@@ -572,20 +572,54 @@ animate {
 }
 
 #image-map-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 80%; 
-  height: auto;
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-#image-map-container  img {
+#image-map-container img {
   max-width: 100%;
-  max-height: 100%;
+  height: auto;
   display: flex;
-  margin: auto;
-  padding-left: 25%;
 }
+
+.flag-icon {
+  position: absolute;
+  z-index: 1;
+}
+
+/* Adjust the styles of the flag icons as needed */
+.flag-icon[data-country="Italy"] {
+  left: 48.9%;
+  top: 26.8%;
+}
+
+.flag-icon[data-country="Ireland"] {
+  left: 42.4%;
+  top: 19.3%;
+}
+
+.flag-icon[data-country="England"] {
+  left: 45%;
+  top: 20.8%;
+}
+
+.flag-icon[data-country="Spain"] {
+  left: 43%;
+  top: 28.5%;
+}
+
+.flag-icon[data-country="Japan"] {
+  left: 88.95%;
+  top: 31.75%;
+}
+
+.flag-icon[data-country="England2"] {
+  left: 44.8%;
+  top: 21.4%;
+}
+
+
 
 
 

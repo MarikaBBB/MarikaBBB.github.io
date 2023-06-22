@@ -53,26 +53,41 @@
   </section>
 <!-- End of About Me Section -->
 
+
 <!-- Image Map Section -->
 <section id="image-map-section">
   <div id="image-map-container">
     <img src="Map.jpg" alt="Image Map" usemap="#flags-map">
     <map name="flags-map">
-      <!-- Italy Flag -->
-      
-      <!-- Ireland Flag -->
-      
-      <!-- England Flag -->
-     
-      <!-- Spain Flag -->
-     
-  
-      <!-- Japan Flag -->
-      
+      <area shape="rect" coords="978, 321, 1028, 371" alt="Italy" onclick="openPopIn('Italy')">
+      <area shape="rect" coords="867, 258, 917, 308" alt="Ireland" onclick="openPopIn('Ireland')">
+      <area shape="rect" coords="903, 261, 953, 311" alt="England" onclick="openPopIn('England')">
+      <area shape="rect" coords="873, 342, 923, 392" alt="Spain" onclick="openPopIn('Spain')">
+      <area shape="rect" coords="1779, 381, 1829, 431" alt="Japan" onclick="openPopIn('Japan')">
+      <area shape="rect" coords="903, 261, 953, 311" alt="England" onclick="openPopIn('England2')">
     </map>
+    <div class="flag-icon italy" data-country="Italy" onclick="openPopIn('Italy')">
+      1🇮🇹
+    </div>
+    <div class="flag-icon ireland" data-country="Ireland" onclick="openPopIn('Ireland')">
+      2🇮🇪
+    </div>
+    <div class="flag-icon england" data-country="England" onclick="openPopIn('England')">
+      4🇬🇧
+    </div>
+    <div class="flag-icon spain" data-country="Spain" onclick="openPopIn('Spain')">
+      3🇪🇸
+    </div>
+    <div class="flag-icon japan" data-country="Japan" onclick="openPopIn('Japan')">
+      5🇯🇵
+    </div>
+    <div class="flag-icon computer" data-country="computer" onclick="openPopIn('England2')"> 
+      6💻 </div>
   </div>
 </section>
 <!-- End of Image Map Section -->
+
+
 
 
 
