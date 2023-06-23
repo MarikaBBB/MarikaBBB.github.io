@@ -1,3 +1,30 @@
+// Add click event listeners to topnav buttons to handle smooth scrolling
+document.addEventListener('DOMContentLoaded', function () {
+  const navLinks = document.querySelectorAll('.topnav .nav-link');
+  
+  // Function to handle click event on topnav buttons
+  function handleClick(event) {
+    event.preventDefault();
+
+    // Remove active class from all nav links
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+
+    // Add active class to the clicked button
+    this.classList.add('active');
+
+    // Scroll to the linked section
+    const target = document.querySelector(this.getAttribute('href'));
+    target.scrollIntoView({ behavior: 'smooth' }); 
+  }
+
+  // Attach click event listeners to topnav buttons
+  navLinks.forEach(link => {
+    link.addEventListener('click', handleClick);
+  });
+});
+
 // Get the necessary elements
 const carouselWrapper = document.querySelector('.carousel-wrapper');
 const projectContainers = document.querySelectorAll('.project-container');
@@ -203,6 +230,19 @@ document.addEventListener('click', function (event) {
 function openPopup(country) {
   const popup = document.querySelector(`.popup[data-country="${country}"]`);
   popup.classList.add('show');
+
+  // Remove selected class and pink class from all flag icons and number circles
+  flagIcons.forEach(function (flagIcon) {
+    flagIcon.classList.remove('selected');
+    flagIcon.querySelector('.number-circle').classList.remove('pink');
+  });
+
+  // Highlight the selected flag and change the number circle color
+  const selectedFlag = document.querySelector(`.flag-icon[data-country="${country}"]`);
+  const numberCircle = selectedFlag.querySelector('.number-circle');
+
+  selectedFlag.classList.add('selected');
+  numberCircle.classList.add('pink');
 }
 
 // Function to close the pop-up window
@@ -210,6 +250,13 @@ function closePopup() {
   const openPopup = document.querySelector('.popup.show');
   if (openPopup) {
     openPopup.classList.remove('show');
+
+    // Remove the selected flag and number circle color
+    const selectedFlag = document.querySelector('.flag-icon.selected');
+    const numberCircle = selectedFlag.querySelector('.number-circle');
+
+    selectedFlag.classList.remove('selected');
+    numberCircle.classList.remove('pink');
   }
 }
 
@@ -222,11 +269,25 @@ let currentPopupIndex = 0;
 // Function to show a popup window
 function showPopup(index) {
   popups[index].classList.add('show');
+
+  // Highlight the flag and change the number circle color
+  const selectedFlag = document.querySelector(`.flag-icon[data-country="${popups[index].dataset.country}"]`);
+  const numberCircle = selectedFlag.querySelector('.number-circle');
+
+  selectedFlag.classList.add('selected');
+  numberCircle.classList.add('pink');
 }
 
 // Function to hide a popup window
 function hidePopup(index) {
   popups[index].classList.remove('show');
+
+  // Remove the selected flag and number circle color
+  const selectedFlag = document.querySelector('.flag-icon.selected');
+  const numberCircle = selectedFlag.querySelector('.number-circle');
+
+  selectedFlag.classList.remove('selected');
+  numberCircle.classList.remove('pink');
 }
 
 // Add event listeners to the flag icons

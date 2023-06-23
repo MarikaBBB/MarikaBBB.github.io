@@ -5,6 +5,7 @@
 /* Reset default margin */
 body {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 /* Header and Title Section */
@@ -23,6 +24,10 @@ body {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 5px;
+}
+
+.topnav .nav-link.active {
+  color: rgba(255, 159, 169, 1);
 }
 
 #title-section {
@@ -274,7 +279,7 @@ p {
 }
 
  /* Testimonials section styling */
- #testimonials-section {
+ #testimonials {
   background-color: #faf0dc;
   margin: 0;
   padding: 10px;
@@ -284,7 +289,7 @@ p {
 }
 
 /* Footer styling */
-#footer {
+#contact {
   background-image: linear-gradient(to top, #08452c 0%, #237f5e 100%);
   margin: 0;
   padding: 10px;
@@ -607,6 +612,11 @@ animate {
   color: black;
   font-size: 12px;
   line-height: 3;
+  transition: background-color 0.3s;
+}
+
+.number-circle.selected {
+  background-color: pink;
 }
 
 .number-circle.selected {
