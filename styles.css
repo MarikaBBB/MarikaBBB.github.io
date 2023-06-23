@@ -36,8 +36,8 @@ body {
   align-items: flex-start; /* Center the content vertically */
 }
 
+/* Main title styling */
 #title-section h1 {
-  /* Main title styling */
   color: white;
   -webkit-text-stroke: 1px whitesmoke;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -50,7 +50,6 @@ body {
 }
 
 #title-section h2 {
-  /* Subtitle styling */
   color: white;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 32px;
@@ -81,9 +80,8 @@ body {
   animation: slideIn 1s ease-in-out forwards;
 }
 
-
+/* Carousel Section */
 #learning-journey {
-  /* Learning journey section styling */
   background-color: #196B4B;
   text-align: center;
   padding: 10px;
@@ -93,9 +91,8 @@ body {
   box-shadow: 0 -3px 3px -2px rgba(0, 0, 0, 0.5);
 }
 
-/* Carousel Section */
-.carousel-container {
-  /* Carousel container styling */
+/* Carousel container styling */
+.carousel-container { 
   width: 100%;
   overflow: hidden;
   background-color: #196b4b;
@@ -103,7 +100,6 @@ body {
 }
 
 .carousel-wrapper {
-  /* Carousel wrapper styling */
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: calc(100% * 6); /* Adjust the width based on the number of projects */
@@ -119,13 +115,12 @@ body {
 }
 
 .carousel {
-  /* Carousel styling */
   width: 100%;
   overflow: hidden;
 }
 
+ /* Individual project container styling */
 .project-container {
-  /* Individual project container styling */
   flex: 0 0 calc(100% / 3);
   margin: 20px;
   display: flex;
@@ -134,21 +129,21 @@ body {
   align-items: center;
 }
 
+ /* Individual project container styling */
 .carousel .project-container {
-  /* Individual project container styling */
   flex: 0 0 300px;
   margin: 20px;
   display: flex;
   flex-direction: column;
 }
 
+ /* Individual project container styling */
 .carousel .project-container:not(:first-child) {
-  /* Adjust the margin space */
   margin-left: 0;
 }
 
+ /* Container content styling */
 .container-content {
-  /* Container content styling */
   width: 250px;
   padding: 20px;
   margin-right: 40px;
@@ -160,17 +155,17 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Arrow navigation container styling */
 .arrow-navigation {
-  /* Arrow navigation container styling */
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
 
+/* Arrow button styling */
 .prev-button,
 .next-button {
-  /* Arrow button styling */
   background: none;
   border: none;
   cursor: pointer;
@@ -184,40 +179,38 @@ body {
 }
 
 .container-content h4 {
-  /* Heading styling */
   margin: 0;
   padding: 0;
 }
 
 h4 {
-  /* Heading 4 styling */
   color: whitesmoke;
   -webkit-text-stroke: 0.5px whitesmoke;
 }
 
+/* Arrow button styling */
 .box-image {
-  /* Image container styling */
   position: relative;
   margin-bottom: -10px;
   margin-top: 10px;
 }
 
+ /* Paragraph styling */
 p {
-  /* Paragraph styling */
   margin: 0;
   padding: 0;
   font-size: 48;
 }
 
-.project-container .box-image {
   /* Project container box image styling */
+.project-container .box-image {
   position: relative;
   overflow: hidden;
   height: 160px;
 }
 
+ /* Project container box image styling */
 .project-container .box-image img {
-  /* Project container box image styling */
   width: 100%;
   height: 90%;
   object-fit: cover;
@@ -225,7 +218,6 @@ p {
 }
 
 .project-container .overlay {
-  /* Overlay styling */
   position: absolute;
   top: 0;
   left: 0;
@@ -240,8 +232,8 @@ p {
   transition: opacity 0.3s;
 }
 
+ /* Project container box image styling */
 .project-container .overlay a.github-link {
-  /* GitHub link styling */
   color: white;
   text-decoration: none;
 }
@@ -251,20 +243,18 @@ p {
 }
 
 .github-link {
-  /* GitHub link styling */
   color: white;
   text-decoration: none;
   cursor: pointer;
 }
 
+
 .project-container .overlay a {
-  /* Overlay link styling */
   color: white;
   text-decoration: none;
 }
 
 .project-container .text {
-  /* Project container text styling */
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -274,23 +264,27 @@ p {
 }
 
 .textT {
-  /* Centered text styling */
   text-align: center;
 }
 
+ /* Project container box image styling */
 .topnav a,
 .container-content a {
-  /* Navigation and container content links styling */
   text-decoration: none;
 }
 
-#testimonials-section {
-  /* Testimonials section styling */
+ /* Testimonials section styling */
+ #testimonials-section {
+  background-color: #faf0dc;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(to right, rgba(255, 159, 169, 1) 0%, rgba(255, 212, 216) 60%);
 }
 
+/* Footer styling */
 #footer {
-  /* Footer styling */
   background-image: linear-gradient(to top, #08452c 0%, #237f5e 100%);
   margin: 0;
   padding: 10px;
@@ -301,44 +295,41 @@ p {
   text-align: center;
 }
 
-.contact-section {
   /* Contact section styling */
+.contact-section {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .contact-section h2 {
-  /* Contact section heading styling */
   font-size: 42px;
   font-weight: 700;
   margin-right: 10px;
 }
 
+ /* Footer content styling */
 .footer-content {
-  /* Footer content styling */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .left-section {
-  /* Left section styling */
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
+ /* Feedback section styling */
 .feedback-text {
-  /* Feedback text styling */
   white-space: pre-line;
   font-size: 22px;
   margin-top: auto;
 }
 
 .feedback-form {
-  /* Feedback form styling */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -350,7 +341,6 @@ p {
 }
 
 .feedback-form textarea {
-  /* Feedback form textarea styling */
   width: 90%;
   max-width: 300px;
   height: auto;
@@ -361,8 +351,8 @@ p {
   padding-top: 10px;
 }
 
+/* Feedback form submit button styling */
 .feedback-form input[type="submit"] {
-  /* Feedback form submit button styling */
   margin-top: 10px;
   padding: 6px 12px;
   font-size: 14px;
@@ -378,24 +368,15 @@ p {
 }
 
 .right-section {
-  /* Right section styling */
   color: white;
   text-align: right;
   font-size: 16px;
   align-self: flex-end;
 }
 
-#testimonials-section {
-  /* Testimonials section styling */
-  background-color: #faf0dc;
-  margin: 0;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
 
+ /* About section styling */
 #about-section {
-  /* About section styling */
   background: linear-gradient(to right, rgba(255, 159, 169, 1) 0%, rgba(255, 212, 216) 60%);
  margin: 0;
  padding: 10px;
@@ -403,23 +384,22 @@ p {
  flex-direction: column;
 }
 
-
 .about-title {
   text-align: center;
   font-size: 32px;
   color: #08452c;
 }
 
+/* Styles for the avatar container */
 #avatar-container {
-  /* Styles for the avatar container */
   position: relative;
   left: 350px;
 }
 
+ /* Styles for the avatar images */
 #avatar1,
 #avatar2,
 #avatar3 {
-  /* Styles for the avatar images */
   width: 300px;
   height: auto;
   cursor: pointer;
@@ -473,13 +453,13 @@ p {
   }
 }
 
+/* Hidden class to hide elements */
 .hidden {
-  /* Hidden class to hide elements */
   display: none;
 }
 
+ /* Animation class for avatar */
 animate {
-  /* Animation class for avatar */
   animation: avatarAnimation 1s infinite alternate;
 }
 
@@ -732,7 +712,7 @@ animate {
   font-size: 20px;
 }
 
-.next-button {
+.nextButtonsPopup {
   display: block;
   font-size: 20px;
   font-weight: bold;

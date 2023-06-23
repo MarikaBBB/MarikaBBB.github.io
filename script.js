@@ -145,10 +145,6 @@ function openHoverBox(country) {
       title.textContent = 'Italy';
       description.textContent = 'Information about Italy.';
       break;
-    case 'Ireland':
-      title.textContent = 'Ireland';
-      description.textContent = 'Information about Ireland.';
-      break;
     case 'England':
       title.textContent = 'England';
       description.textContent = 'Information about England.';
@@ -203,8 +199,6 @@ document.addEventListener('click', function (event) {
   }
 });
 
-// Your existing JavaScript code
-
 // Function to open the pop-up window
 function openPopup(country) {
   const popup = document.querySelector(`.popup[data-country="${country}"]`);
@@ -221,9 +215,6 @@ function closePopup() {
 
 // Get all the popup windows
 const popups = document.querySelectorAll('.popup');
-
-// Get all the next buttons
-const nextButtons = document.querySelectorAll('.next-button');
 
 // Initialize the current popup index
 let currentPopupIndex = 0;
@@ -255,19 +246,23 @@ closeButtons.forEach(function (closeButton) {
   });
 });
 
-// Add event listeners to the next buttons
-nextButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    hidePopup(currentPopupIndex); // Hide the current popup
+// Get all the next buttons for pop-ups
+const nextButtonsPopup = document.querySelectorAll('.nextButtonsPopup');
 
-    // Move to the next popup
-    currentPopupIndex++;
-    if (currentPopupIndex >= popups.length) {
-      currentPopupIndex = 0;
-    }
+// Function to show the next popup
+function showNextPopup() {
+  hidePopup(currentPopupIndex); // Hide the current popup
 
-    showPopup(currentPopupIndex); // Show the next popup
-  });
+  // Move to the next popup
+  currentPopupIndex++;
+  if (currentPopupIndex >= popups.length) {
+    currentPopupIndex = 0;
+  }
+
+  showPopup(currentPopupIndex); // Show the next popup
+}
+
+// Add event listeners to the pop-up next buttons
+nextButtonsPopup.forEach((button, index) => {
+  button.addEventListener('click', showNextPopup);
 });
-
-// Rest of your existing JavaScript code
