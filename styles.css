@@ -26,8 +26,8 @@ body {
   border-radius: 5px;
 }
 
-.topnav .nav-link.active {
-  color: rgba(255, 159, 169, 1);
+.nav-link.hovered {
+  color: rgba(255, 159, 169, 1); 
 }
 
 #title-section {

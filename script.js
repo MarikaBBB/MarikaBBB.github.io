@@ -1,29 +1,23 @@
-// Add click event listeners to topnav buttons to handle smooth scrolling
 document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('.topnav .nav-link');
-  
-  // Function to handle click event on topnav buttons
-  function handleClick(event) {
-    event.preventDefault();
 
-    // Remove active class from all nav links
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-    });
-
-    // Add active class to the clicked button
-    this.classList.add('active');
-
-    // Scroll to the linked section
-    const target = document.querySelector(this.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' }); 
+  // Function to handle mouseenter event on topnav buttons
+  function handleMouseEnter() {
+    this.classList.add('hovered');
   }
 
-  // Attach click event listeners to topnav buttons
+  // Function to handle mouseleave event on topnav buttons
+  function handleMouseLeave() {
+    this.classList.remove('hovered');
+  }
+
+  // Attach mouseenter and mouseleave event listeners to topnav buttons
   navLinks.forEach(link => {
-    link.addEventListener('click', handleClick);
+    link.addEventListener('mouseenter', handleMouseEnter);
+    link.addEventListener('mouseleave', handleMouseLeave);
   });
 });
+
 
 // Get the necessary elements
 const carouselWrapper = document.querySelector('.carousel-wrapper');
