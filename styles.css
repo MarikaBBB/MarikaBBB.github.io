@@ -473,11 +473,6 @@ p {
   }
 }
 
-/* .avatar {
-  Styles for clickable avatar 
-  cursor: pointer;
-}*/
-
 .hidden {
   /* Hidden class to hide elements */
   display: none;
@@ -575,7 +570,7 @@ animate {
 
 #image-map-container {
   position: relative;
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -606,40 +601,94 @@ animate {
 
 .flag-icon {
   position: absolute;
-  z-index: 1;
-  font-weight: bold;
   cursor: pointer;
+}
+
+.flag-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.number-circle {
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+  font-weight: bold;
+  color: black;
+  font-size: 12px;
+  line-height: 3;
+}
+
+.emoji {
+  margin-left: 5px; /* Adjust the spacing between the number and emoji */
+  font-size: 32px;
 }
 
 /* Adjust the styles of the flag icons as needed */
 .flag-icon[data-country="Italy"] {
   left: 48.9%;
-  top: 26.8%;
-}
-
-.flag-icon[data-country="Ireland"] {
-  left: 42.4%;
-  top: 19.3%;
-}
-
-.flag-icon[data-country="England"] {
-  left: 45%;
-  top: 20.8%;
+  top: 25.8%;
 }
 
 .flag-icon[data-country="Spain"] {
-  left: 43%;
-  top: 28.5%;
+  top: 30%;
+  left: 45.5%;
+  transform: translate(-50%, -50%);
 }
 
 .flag-icon[data-country="Japan"] {
-  left: 88.95%;
-  top: 31.75%;
+  top: 33%;
+  left: 89%;
+  transform: translate(-50%, -50%);
+}
+
+.flag-icon[data-country="Japan"] .number-circle {
+  left: 29px;
+  margin-top: 25px;
+}
+
+.flag-icon[data-country="Japan"] .emoji {
+  margin-left: 34px; 
+}
+
+.flag-icon[data-country="England"] {
+  top: 22%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+}
+
+.flag-icon[data-country="England"] .number-circle {
+  left: 29px;
+  margin-top: 25px;
+}
+
+.flag-icon[data-country="England"] .emoji {
+  margin-left: 34px; 
 }
 
 .flag-icon[data-country="England2"] {
-  left: 45%;
-  top: 17.9%;
+  top: 16.8%;
+  left: 45.4%;
+  transform: translate(-50%, -50%);
+}
+
+.flag-icon[data-country="England2"] .number-circle {
+  left: 28px; 
+  margin-top: 50px;
+}
+
+.flag-icon[data-country="England2"] .emoji {
+  margin-right: 35px; 
 }
 
 .popup {
