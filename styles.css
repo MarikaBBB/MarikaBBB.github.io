@@ -732,6 +732,23 @@ animate {
   font-size: 20px;
 }
 
+.next-button {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 10px;
+  color: #08452c;
+  background-color: #ffbfc1;
+  border: 1px solid black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ 
+
 /* Mobile Portrait */
 @media only screen and (max-width: 480px) {
   /* Adjust the navigation */

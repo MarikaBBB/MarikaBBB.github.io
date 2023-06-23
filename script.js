@@ -47,12 +47,9 @@ function prevSlide() {
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 
-
 // Add click event listeners to the arrow navigation buttons
 prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);
-
-
 
 // Function to check if the element is in the viewport
 let isAnimating = false;
@@ -206,6 +203,8 @@ document.addEventListener('click', function (event) {
   }
 });
 
+// Your existing JavaScript code
+
 // Function to open the pop-up window
 function openPopup(country) {
   const popup = document.querySelector(`.popup[data-country="${country}"]`);
@@ -218,6 +217,25 @@ function closePopup() {
   if (openPopup) {
     openPopup.classList.remove('show');
   }
+}
+
+// Get all the popup windows
+const popups = document.querySelectorAll('.popup');
+
+// Get all the next buttons
+const nextButtons = document.querySelectorAll('.next-button');
+
+// Initialize the current popup index
+let currentPopupIndex = 0;
+
+// Function to show a popup window
+function showPopup(index) {
+  popups[index].classList.add('show');
+}
+
+// Function to hide a popup window
+function hidePopup(index) {
+  popups[index].classList.remove('show');
 }
 
 // Add event listeners to the flag icons
@@ -233,8 +251,23 @@ flagIcons.forEach(function (flagIcon) {
 closeButtons.forEach(function (closeButton) {
   closeButton.addEventListener('click', function () {
     const popup = this.parentNode;
-    popup.classList.remove('show'); // Close the current pop-up window
+    hidePopup(Array.from(popups).indexOf(popup)); // Close the current pop-up window
   });
 });
 
+// Add event listeners to the next buttons
+nextButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    hidePopup(currentPopupIndex); // Hide the current popup
 
+    // Move to the next popup
+    currentPopupIndex++;
+    if (currentPopupIndex >= popups.length) {
+      currentPopupIndex = 0;
+    }
+
+    showPopup(currentPopupIndex); // Show the next popup
+  });
+});
+
+// Rest of your existing JavaScript code
