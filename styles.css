@@ -609,6 +609,10 @@ animate {
   line-height: 3;
 }
 
+.number-circle.selected {
+  background-color: pink; /* Update the background color for the selected element */
+}
+
 .emoji {
   margin-left: 5px; /* Adjust the spacing between the number and emoji */
   font-size: 32px;
@@ -671,10 +675,18 @@ animate {
   margin-right: 35px; 
 }
 
+.fixed-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
 .popup {
   display: none;
-  position: fixed;
-  top: 50%;
+  position: absolute;
+  top: -50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
@@ -818,5 +830,7 @@ animate {
   max-width: 150px;
 }
 }
+
+
 
 
