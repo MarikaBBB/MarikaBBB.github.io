@@ -8,8 +8,8 @@ To see a live demo of the puzzle game, you can visit this link: https://marikabb
 ### How the Puzzle Works
 - To play the Puzzle Game, follow these steps:
 - Access the game by opening the index.html file in a web browser.
-- The game will start automatically, and you will see a grid of shuffled tiles.
-- Click and drag a tile to move it to an adjacent empty space.
+- The game will start when you press the button "New Game". You will see a grid of shuffled tiles.
+- Click and drag a tile to move it to the correct spot.
 - Continue rearranging the tiles until they are in the correct order.
 - If you reach the maximum number of moves or the time limit, a game over alert will be displayed.
 - Once the tiles are in the correct order, a congratulatory alert will be displayed, and the timer will stop.
@@ -19,14 +19,14 @@ To see a live demo of the puzzle game, you can visit this link: https://marikabb
 
 ### Features:
 - Each tile represents a part of an image from a Ghibli movie. 
-- Interactive tile dragging and dropping mechanism for rearranging tiles
-- Randomized tile shuffling at the start of each game
-- Moves counter to keep track of the number of moves made by the player
-- Timer to track the time taken to solve the puzzle
-- Maximum moves limit and time limit options for added challenge
-- Congratulatory alert message and timer stop when the puzzle is solved
-- Game over alert message when the maximum moves or time limit is reached
-- Modal with game instructions accessible from the main menu
+- Interactive tile dragging and dropping mechanism for rearranging tiles.
+- Randomized tile shuffling at the start of each game.
+- Moves counter to keep track of the number of moves made by the player.
+- Timer to track the time taken to solve the puzzle.
+- Maximum moves limit and time limit options for added challenge.
+- Congratulatory alert message and timer stop when the puzzle is solved.
+- Game over alert message when the maximum moves or time limit is reached.
+- Modal with game instructions accessible from the main menu.
 
 
 ### Future implementations:
@@ -41,15 +41,15 @@ During the development of this game, I encountered several challenges and perfor
 
 1- Shuffling the image into tiles: Initially, I attempted to shuffle the image into tiles programmatically using JavaScript. However, I encountered difficulties in properly randomizing the tiles. After exploring different approaches, I decided to handle the shuffling in CSS. By assigning different order values to the tiles in the CSS styles, I achieved a visually shuffled puzzle. This simplified the logic and futher step in JavaScript. 
 
-2- Checking if tiles are in the correct order: Initially, I struggled with implementing the logic to check if the tiles were in the correct order. The checkTilesOrder() function didn't work as expected. To resolve this, I carefully reviewed the code and realized that I needed to compare the tile order with the expected order. By making this adjustment, I was able to correctly determine if the puzzle was solved.
+2- Checking if tiles are in the correct order: Initially, I struggled with implementing the logic to check if the tiles were in the correct order. The ```checkTilesOrder();``` function didn't work as expected. To resolve this, I carefully reviewed the code and realized that I needed to compare the tile order with the expected order. By making this adjustment, I was able to correctly determine if the puzzle was solved.
 
-3- Timer and game over alert: When the time limit or maximum moves were reached, I noticed that although the game over alert appeared, the timer continued running. To fix this, I modified the stopTimer() function to clear the timer interval, ensuring that the timer stopped when the game was over. This ensured that the alert message and timer behavior were synchronized.
+3- Timer and game over alert: When the time limit or maximum moves were reached, I noticed that although the game over alert appeared, the timer continued running. To fix this, I modified the ```stopTimer();``` function to clear the timer interval, ensuring that the timer stopped when the game was over. This ensured that the alert message and timer behavior were synchronized.
 
-4- New Game button and timer speed: Another challenge I encountered was that when clicking the "New Game" button, the timer appeared to run faster than normal. To address this issue, I realized that I needed to reset the timer and start it fresh for each new game. I achieved this by calling the resetTimer() function at the beginning of the shuffle() function. This ensured that the timer started correctly and ran at a consistent speed throughout the game.
+4- New Game button and timer speed: Another challenge I encountered was that when clicking the "New Game" button, the timer appeared to run faster than normal. To address this issue, I realized that I needed to reset the timer and start it fresh for each new game. I achieved this by calling the ```resetTimer();``` function at the beginning of the ```shuffle();``` function. This ensured that the timer started correctly and ran at a consistent speed throughout the game.
 
 5- Closing the game over alert: After clicking "OK" on the game over alert, I noticed that the message did not close as expected. To resolve this, I modified the event listener for the "OK" button to hide the alert after it was clicked. This provided a smoother user experience by dismissing the alert properly.
 
-6- Timer speed on page load: I observed that the timer appeared to run at a normal speed when the page initially loaded, but it became faster after clicking the "New Game" button. Upon investigation, I realized that the timer interval duration needed adjustment. By fine-tuning the interval duration in the startTimer() function, I ensured that the timer maintained a consistent speed throughout the game, regardless of when it was started.
+6- Timer speed on page load: I observed that the timer appeared to run at a normal speed when the page initially loaded, but it became faster after clicking the "New Game" button. Upon investigation, I realized that the timer interval duration needed adjustment. By fine-tuning the interval duration in the ```startTimer()'``` function, I ensured that the timer maintained a consistent speed throughout the game, regardless of when it was started.
 
 ### Debugging Process
 I carefully reviewed the code logic, inspected variables, and setted breakpoints in the IDE. Additionally, I used the google inpector and closely monitored the browser console for any error messages or unexpected behavior.
