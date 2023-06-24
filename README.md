@@ -1,4 +1,4 @@
-# WEBSIE PROJECT
+# WEBSITE PROJECT
 
 Welcome to my Founders & Coders Portfolio! This is a web page created by me, Marika Bertelli, to showcase my skills, projects, and learning journey. This portfolio serves as a playground for me to explore and demonstrate my knowledge of web development concepts. At the same time, the website is designed to allow visitors to learn more about me.
 
