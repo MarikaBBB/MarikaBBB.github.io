@@ -122,19 +122,21 @@ document.addEventListener("DOMContentLoaded", function() {
   // Get the position of the About Me section
   const aboutSection = document.getElementById("about-section");
   const aboutSectionTop = aboutSection.offsetTop;
-  const aboutSectionBottom = aboutSectionTop + aboutSection.offsetHeight;
 
   // Get the speech bubble element
   const speechBubble2 = document.getElementById("speech-bubble2");
+  const startStoryButton = document.getElementById("start-story-btn");
 
-  // Function to check if the user is in the About Me section
+  // Function to check if the user is at the top of the About Me section
   function checkIfInAboutSection() {
     const currentScroll = window.scrollY;
 
-    if (currentScroll >= aboutSectionTop && currentScroll <= aboutSectionBottom) {
+    if (currentScroll >= aboutSectionTop) {
       speechBubble2.classList.remove("hidden");
+      startStoryButton.classList.remove("hidden");
     } else {
       speechBubble2.classList.add("hidden");
+      startStoryButton.classList.add("hidden");
     }
   }
 
@@ -142,8 +144,6 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("scroll", checkIfInAboutSection);
 });
 
-
-// Event listener for the "Start My Story" button
 // Event listener for the "Start My Story" button
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('start-story-btn').addEventListener('click', function() {
@@ -152,11 +152,16 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
 // Function to open the pop-up window
 function openPopup(country) {
   const popup = document.querySelector(`.popup[data-country="${country}"]`);
   popup.classList.add('show');
+
+  // Get the flag icon element corresponding to the country
+  const flagIcon = document.querySelector(`.flag-icon[data-country="${country}"] .emoji`);
+
+  // Add the "selected" class to the flag icon
+  flagIcon.classList.add('selected');
 
   // Get the close button within the popup
   const closeButton = popup.querySelector('.close');
@@ -195,20 +200,38 @@ function hidePopup(index) {
   popups[index].classList.remove('show');
 }
 
+// Function to show the next popup
+function showNextPopup() {
+  hidePopup(currentPopupIndex); // Hide the current popup
+
+  // Move to the next popup
+  currentPopupIndex++;
+  if (currentPopupIndex >= popups.length) {
+    currentPopupIndex = 0;
+  }
+
+  showPopup(currentPopupIndex); // Show the next popup
+}
+
 // Add event listeners to the flag icons
 const flagIcons = document.querySelectorAll('.flag-icon');
-flagIcons.forEach(function (flagIcon) {
-  flagIcon.addEventListener('click', function () {
+flagIcons.forEach(function(flagIcon) {
+  flagIcon.addEventListener('click', function() {
     const country = this.getAttribute('data-country');
     closePopup(); // Close any open pop-up windows
     openPopup(country); // Open the selected pop-up window
+    removeSelectedClass(); // Remove "selected" class from all flag icons
+
+    // Add the "selected" class to the clicked flag icon
+    const emojiElement = this.querySelector('.emoji');
+    emojiElement.classList.add('selected');
   });
 });
 
 // Add event listeners to close buttons in pop-up windows
 const closeButtons = document.querySelectorAll('.popup .close');
-closeButtons.forEach(function (closeButton) {
-  closeButton.addEventListener('click', function () {
+closeButtons.forEach(function(closeButton) {
+  closeButton.addEventListener('click', function() {
     const popup = this.parentNode;
     hidePopup(Array.from(popups).indexOf(popup)); // Close the current pop-up window
   });
@@ -216,6 +239,42 @@ closeButtons.forEach(function (closeButton) {
 
 // Get all the next buttons for pop-ups
 const nextButtonsPopup = document.querySelectorAll('.nextButtonsPopup');
+
+// Add event listeners to the pop-up next buttons
+nextButtonsPopup.forEach((button, index) => {
+  button.addEventListener('click', showNextPopup);
+});
+
+// Remove the "selected" class from all flag icons
+function removeSelectedClass() {
+  const flagIcons = document.querySelectorAll('.flag-icon .emoji');
+  flagIcons.forEach(function (flagIcon) {
+    flagIcon.classList.remove('selected');
+  });
+}
+
+// Add event listeners to the flag icons
+flagIcons.forEach(function (flagIcon) {
+  flagIcon.addEventListener('click', function () {
+    const country = this.getAttribute('data-country');
+    closePopup(); // Close any open pop-up windows
+    openPopup(country); // Open the selected pop-up window
+
+    removeSelectedClass(); // Remove "selected" class from all flag icons
+
+    // Add the "selected" class to the clicked flag icon
+    const emojiElement = this.querySelector('.emoji');
+    emojiElement.classList.add('selected');
+  });
+});
+
+// Add event listeners to close buttons in pop-up windows
+closeButtons.forEach(function (closeButton) {
+  closeButton.addEventListener('click', function () {
+    const popup = this.parentNode;
+    hidePopup(Array.from(popups).indexOf(popup)); // Close the current pop-up window
+  });
+});
 
 // Function to show the next popup
 function showNextPopup() {
