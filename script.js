@@ -143,12 +143,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Event listener to the "Start My Story" button
+// Event listener for the "Start My Story" button
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('start-story-btn').addEventListener('click', function() {
     document.getElementById('image-map-section').scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('.popup[data-country="Italy"]').style.display = 'block';
   });
 });
+
 
 // Initialize flag icons and close buttons
 const flagIcons = document.querySelectorAll('.flag-icon');
