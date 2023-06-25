@@ -144,88 +144,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // Event listener for the "Start My Story" button
+// Event listener for the "Start My Story" button
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('start-story-btn').addEventListener('click', function() {
     document.getElementById('image-map-section').scrollIntoView({ behavior: 'smooth' });
-    document.querySelector('.popup[data-country="Italy"]').style.display = 'block';
+    openPopup('Italy'); // Open the Italy popup window
   });
 });
 
-
-// Initialize flag icons and close buttons
-const flagIcons = document.querySelectorAll('.flag-icon');
-const closeButtons = document.querySelectorAll('.popup .close');
-
-// Function to open the hover box
-function openHoverBox(country) {
-  const hoverBox = document.querySelector('.hover-box');
-  const title = document.getElementById('location-title');
-  const description = document.getElementById('location-description');
-
-  // Set the title and description based on the selected country
-  switch (country) {
-    case 'Italy':
-      title.textContent = 'Italy';
-      description.textContent = 'Information about Italy.';
-      break;
-    case 'England':
-      title.textContent = 'England';
-      description.textContent = 'Information about England.';
-      break;
-    case 'Spain':
-      title.textContent = 'Spain';
-      description.textContent = 'Information about Spain.';
-      break;
-    case 'Japan':
-      title.textContent = 'Japan';
-      description.textContent = 'Information about Japan.';
-      break;
-    case 'England2':
-      title.textContent = 'England2';
-      description.textContent = 'Information about England2.';
-      break;
-    default:
-      title.textContent = '';
-      description.textContent = '';
-  }
-
-  // Show the hover box with animation
-  hoverBox.style.opacity = '1';
-  hoverBox.style.visibility = 'visible';
-  hoverBox.style.top = '0';
-
-  // Add event listener to close the hover box
-  hoverBox.addEventListener('click', function (event) {
-    if (event.target === hoverBox) {
-      closeHoverBox();
-    }
-  });
-}
-
-// Function to close the hover box
-function closeHoverBox() {
-  const hoverBox = document.querySelector('.hover-box');
-
-  // Hide the hover box with animation
-  hoverBox.style.opacity = '0';
-  hoverBox.style.visibility = 'hidden';
-  hoverBox.style.top = '-100px';
-}
-
-// Close the hover box when clicking outside it
-document.addEventListener('click', function (event) {
-  const hoverBox = document.querySelector('.hover-box');
-  const targetElement = event.target;
-
-  if (!hoverBox.contains(targetElement) && !Array.from(flagIcons).includes(targetElement)) {
-    closeHoverBox();
-  }
-});
 
 // Function to open the pop-up window
 function openPopup(country) {
   const popup = document.querySelector(`.popup[data-country="${country}"]`);
   popup.classList.add('show');
+
+  // Get the close button within the popup
+  const closeButton = popup.querySelector('.close');
+
+  // Add event listener to the close button
+  closeButton.addEventListener('click', function() {
+    closePopup();
+  });
 }
 
 // Function to close the pop-up window
@@ -234,11 +173,9 @@ function closePopup() {
   if (openPopup) {
     openPopup.classList.remove('show');
 
-    // Remove the selected flag and number circle color
-    const selectedFlag = document.querySelector('.flag-icon.selected');
-    const numberCircle = selectedFlag.querySelector('.number-circle');
-
-    selectedFlag.classList.remove('selected');
+    // Remove the event listener from the close button
+    const closeButton = openPopup.querySelector('.close');
+    closeButton.removeEventListener('click', closePopup);
   }
 }
 
@@ -259,6 +196,7 @@ function hidePopup(index) {
 }
 
 // Add event listeners to the flag icons
+const flagIcons = document.querySelectorAll('.flag-icon');
 flagIcons.forEach(function (flagIcon) {
   flagIcon.addEventListener('click', function () {
     const country = this.getAttribute('data-country');
@@ -268,6 +206,7 @@ flagIcons.forEach(function (flagIcon) {
 });
 
 // Add event listeners to close buttons in pop-up windows
+const closeButtons = document.querySelectorAll('.popup .close');
 closeButtons.forEach(function (closeButton) {
   closeButton.addEventListener('click', function () {
     const popup = this.parentNode;
