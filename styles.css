@@ -203,7 +203,6 @@ h4 {
  /* Paragraph styling */
 p {
   margin: 0;
-  padding-bottom: 35px;
 }
 
   /* Project container box image styling */
@@ -719,6 +718,10 @@ animate {
   color: #08452c;
 }
 
+.ita {
+  padding-bottom: 45px;
+}
+
 /* Close button style */
 .close {
   position: absolute;
@@ -742,11 +745,11 @@ animate {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-/*.paragraph-spacing {
-  padding-top: 10px; 
-}*/
 
 .photo-container {
   display: flex;
@@ -772,24 +775,34 @@ animate {
   margin-left: 10px;
 }
 
-.content {
-  display: flex;
-  align-items: flex-start;
+.photoStory {
+  float: left;
+  margin-right: 10px;
+  width: 180px;
+  height: 100px;
+
+}  
+
+.founders {
+  float: left;
+  margin-right: 10px;
 }
 
-
-.paragraph {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
+.london {
+    margin-top: 30px;
 }
 
-.paragraph img {
-  width: 200px; 
-  height: auto; 
+.popup-text {
+  margin-top: 10px;
 }
 
+.coders {
+  margin-bottom: 10px;
+}
 
+.nextButtonsPopup {
+  margin-top: 10px;
+}
 
 
 /* Mobile Portrait */
