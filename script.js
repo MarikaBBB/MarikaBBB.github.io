@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
 // Get the necessary elements
 const carouselWrapper = document.querySelector('.carousel-wrapper');
 const projectContainers = document.querySelectorAll('.project-container');
