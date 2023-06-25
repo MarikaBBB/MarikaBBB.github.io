@@ -613,17 +613,13 @@ animate {
   transition: background-color 0.3s;
 }
 
-.number-circle.selected {
-  background-color: pink;
-}
-
-.number-circle.selected {
-  background-color: pink; /* Update the background color for the selected element */
-}
-
 .emoji {
   margin-left: 5px; /* Adjust the spacing between the number and emoji */
   font-size: 32px;
+}
+
+.flag-icon .emoji.selected {
+  box-shadow: 0 0 0 2px blue inset;
 }
 
 /* Adjust the styles of the flag icons as needed */

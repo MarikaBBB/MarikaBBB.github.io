@@ -176,11 +176,20 @@ function openPopup(country) {
 function closePopup() {
   const openPopup = document.querySelector('.popup.show');
   if (openPopup) {
-    openPopup.classList.remove('show');
+    // Get the country associated with the open popup
+    const country = openPopup.getAttribute('data-country');
+
+    // Remove the "selected" class from the flag icon
+    const flagIcon = document.querySelector(`.flag-icon[data-country="${country}"] .emoji`);
+    if (flagIcon) {
+      flagIcon.classList.remove('selected');
+    }
 
     // Remove the event listener from the close button
     const closeButton = openPopup.querySelector('.close');
     closeButton.removeEventListener('click', closePopup);
+
+    openPopup.classList.remove('show');
   }
 }
 
@@ -198,6 +207,12 @@ function showPopup(index) {
 // Function to hide a popup window
 function hidePopup(index) {
   popups[index].classList.remove('show');
+
+  // Check if all popups are hidden
+  const allHidden = Array.from(popups).every(popup => !popup.classList.contains('show'));
+  if (allHidden) {
+    removeSelectedClass(); // Remove "selected" class from all flag icons
+  }
 }
 
 // Function to show the next popup
@@ -211,9 +226,23 @@ function showNextPopup() {
   }
 
   showPopup(currentPopupIndex); // Show the next popup
+
+  // Remove "selected" class from the previously selected flag icon
+  const selectedFlagIcon = document.querySelector('.flag-icon .emoji.selected');
+  if (selectedFlagIcon) {
+    selectedFlagIcon.classList.remove('selected');
+  }
+
+  // Get the flag icon element corresponding to the current popup
+  const currentPopup = popups[currentPopupIndex];
+  const country = currentPopup.getAttribute('data-country');
+  const flagIcon = document.querySelector(`.flag-icon[data-country="${country}"] .emoji`);
+
+  // Add the "selected" class to the flag icon of the current popup
+  flagIcon.classList.add('selected');
 }
 
-// Add event listeners to the flag icons
+// Event listeners to the flag icons
 const flagIcons = document.querySelectorAll('.flag-icon');
 flagIcons.forEach(function(flagIcon) {
   flagIcon.addEventListener('click', function() {
@@ -228,6 +257,9 @@ flagIcons.forEach(function(flagIcon) {
   });
 });
 
+// Get all the next buttons for pop-ups
+const nextButtonsPopup = document.querySelectorAll('.nextButtonsPopup');
+
 // Add event listeners to close buttons in pop-up windows
 const closeButtons = document.querySelectorAll('.popup .close');
 closeButtons.forEach(function(closeButton) {
@@ -236,9 +268,6 @@ closeButtons.forEach(function(closeButton) {
     hidePopup(Array.from(popups).indexOf(popup)); // Close the current pop-up window
   });
 });
-
-// Get all the next buttons for pop-ups
-const nextButtonsPopup = document.querySelectorAll('.nextButtonsPopup');
 
 // Add event listeners to the pop-up next buttons
 nextButtonsPopup.forEach((button, index) => {
@@ -253,20 +282,26 @@ function removeSelectedClass() {
   });
 }
 
-// Add event listeners to the flag icons
-flagIcons.forEach(function (flagIcon) {
-  flagIcon.addEventListener('click', function () {
+// Event listener for the flag icons
+flagIcons.forEach(function(flagIcon) {
+  flagIcon.addEventListener('click', function() {
     const country = this.getAttribute('data-country');
     closePopup(); // Close any open pop-up windows
-    openPopup(country); // Open the selected pop-up window
 
-    removeSelectedClass(); // Remove "selected" class from all flag icons
+    // Remove "selected" class from the previously selected flag icon
+    const selectedFlagIcon = document.querySelector('.flag-icon .emoji.selected');
+    if (selectedFlagIcon) {
+      selectedFlagIcon.classList.remove('selected');
+    }
 
     // Add the "selected" class to the clicked flag icon
     const emojiElement = this.querySelector('.emoji');
     emojiElement.classList.add('selected');
+
+    openPopup(country); // Open the selected pop-up window
   });
 });
+
 
 // Add event listeners to close buttons in pop-up windows
 closeButtons.forEach(function (closeButton) {
@@ -275,19 +310,6 @@ closeButtons.forEach(function (closeButton) {
     hidePopup(Array.from(popups).indexOf(popup)); // Close the current pop-up window
   });
 });
-
-// Function to show the next popup
-function showNextPopup() {
-  hidePopup(currentPopupIndex); // Hide the current popup
-
-  // Move to the next popup
-  currentPopupIndex++;
-  if (currentPopupIndex >= popups.length) {
-    currentPopupIndex = 0;
-  }
-
-  showPopup(currentPopupIndex); // Show the next popup
-}
 
 // Add event listeners to the pop-up next buttons
 nextButtonsPopup.forEach((button, index) => {
