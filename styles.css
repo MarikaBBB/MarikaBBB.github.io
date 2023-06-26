@@ -85,13 +85,19 @@ body {
   animation: slideIn 1s ease-in-out forwards;
 }
 
+.titleH2 {
+  text-align: center;
+  font-size: 42px;
+  color: #08452c;
+}
+
 /* Carousel Section */
 #learning-journey {
   background-color: #196B4B;
   text-align: center;
   padding: 10px;
   margin: 0;
-  font-size: 26px;
+  font-size: 20px;
   color: white;
   box-shadow: 0 -3px 3px -2px rgba(0, 0, 0, 0.5);
 }
@@ -277,12 +283,47 @@ p {
 
  /* Testimonials section styling */
  #testimonials {
-  background-color: #faf0dc;
-  margin: 0;
-  padding: 10px;
   display: flex;
+  margin: 0;
+  padding: 10px 60px;
   flex-direction: column;
   background: linear-gradient(to right, rgba(255, 159, 169, 1) 0%, rgba(255, 212, 216) 60%);
+  color: #08452c;
+}
+
+.testimonial {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.testimonial img {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.testimonial .testimonial-content {
+  flex: 1;
+  text-align: justify;
+  padding-right: 30px;
+}
+
+.testimonial .testimonial-content q {
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+  /*font-weight: bold;*/
+}
+
+.testimonial .testimonial-content p {
+  margin-top: 5px; 
+  font-size: 14px;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 /* Footer styling */
@@ -384,12 +425,6 @@ p {
  padding: 10px;
  display: flex;
  flex-direction: column;
-}
-
-.about-title {
-  text-align: center;
-  font-size: 32px;
-  color: #08452c;
 }
 
 /* Styles for the avatar container */
