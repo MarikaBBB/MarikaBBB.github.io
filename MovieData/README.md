@@ -9,7 +9,7 @@ For this project, my goal is to build a user interface using HTML and populate i
 To successfully complete this project, I need to meet the following requirements:
 
 - Store the movie data object in a JavaScript file within my project's codebase.
-- Use ```DOM manipulation``` techniques to render the movie data onto the webpage.
+- Use DOM manipulation techniques to render the movie data onto the webpage.
 - Implement user interaction features, allowing users to affect the display of the data by interacting with the webpage.
 - Provide functionality for users to update the movie data stored in the object by interacting with the webpage.
 

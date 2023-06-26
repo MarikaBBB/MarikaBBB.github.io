@@ -18,10 +18,10 @@ My motivation for this project was to inject my personality and creativity into 
 
 - Header Section: This section contains a navigation bar with links to different sections of my portfolio, such as About Me, Projects, Testimonials, and Contact. This allows visitors to quickly explore different areas of my portfolio.
 - Title Section: A visually appealing section with a welcome message, my name, and a motivational quote.
-- About Me Section: This section provides an introduction to who I am, including my avatar and interactive elements that reveal more information when clicked. This section aims to provide a personal touch and give visitors an understanding of my journey as a developer.
+- About Me Section: This section provides an introduction to who I am, including my avatar and interactive elements that reveal more information when clicked. This section aims to provide a personal touch and give visitors an understanding of my journey as a self-taught beginner developer.
 - Image Map Section: An interactive image map displaying different countries and locations that I have a connection with. Clicking on each location reveals a popup window with additional details.
 - Learning Journey Section: This section highlights my learning journey through challenges and projects. I created a carousel to showcase all my projects. Each project includes a description, image, and links to the GitHub repository or live demo.
-- Testimonials Section: In this section, I proudly display feedback from individuals who have witnessed my enthusiasm and development throughout my application journey. These individuals are my biggest sources of motivation and support, including my flatmate and mentor, one of my closest friends and ex-colleague, and my mother. Their words of encouragement and belief in my abilities have been invaluable in shaping my growth as a developer.
+- Testimonials Section: In this section, I proudly display feedback from individuals who have witnessed my enthusiasm and development throughout my application journey. These individuals are my biggest sources of motivation and support, including my flatmate and mentor, one of my closest friends and ex-colleague, and my mother. Their words of encouragement and belief in my abilities have been invaluable in shaping my growth as a self-taught beginner developer.
 - Footer Section: The footer includes a contact form for providing feedback and get in touch with me. Feel free to share your thoughts, suggestions, or any other comments. The feedback form is linked to my personal email.
 
 ### Features
@@ -29,10 +29,9 @@ Throughout the website, I have incorporated interactive elements like animations
 
 - Animating Avatars: Clicking on an avatar triggers an animation effect, adding visual appeal to the web page.
 - Speech Bubble: A speech bubble appears when the user scrolls to a specific section of the web page, creating a dynamic visual cue.
-- Hover Boxes: Hovering over country flags reveals additional information about each country, allowing users to explore various locations.
-- Pop-up Windows: Clicking on flag icons opens pop-up windows with detailed information about specific countries, enabling users to delve deeper into each location.
+- Pop-up Windows: Clicking on flag icons opens pop-up windows with detailed information about me.
 - Project Carousel: A looping carousel showcases your projects, allowing users to navigate through them and view project details.
-- Smooth Scrolling: Clicking the "Start My Story" button smoothly scrolls to the image map section, providing a seamless user experience.
+- Smooth Scrolling: Clicking the "Start My Story" button smoothly scrolls to the image map section and open the first po-up window.
 - Image Sources: I used Freepik for finding images (https://www.freepik.com) and Pixton (https://app.pixton.com/#/) for creating my avatar.
 
 ### Challenges

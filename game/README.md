@@ -7,7 +7,7 @@ To see a live demo of the puzzle game, you can visit this link: https://marikabb
 
 ### How the Puzzle Works
 - To play the Puzzle Game, follow these steps:
-- Access the game by opening the index.html file in a web browser.
+- Access the game by opening the 'index.html' file in a web browser.
 - The game will start when you press the button "New Game". You will see a grid of shuffled tiles.
 - Click and drag a tile to move it to the correct spot.
 - Continue rearranging the tiles until they are in the correct order.
