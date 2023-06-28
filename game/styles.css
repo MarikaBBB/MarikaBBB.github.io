@@ -1,13 +1,12 @@
 * {
 	padding: 0;
-  margin: 0;
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: #0c67ae;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #0c67ae;
 }
 
 .header {
@@ -32,21 +31,21 @@ body {
   }
 
   
-  .container {
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
   
-  .game-grid {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    margin-bottom: auto;
-  }
+.game-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: auto;
+}
 
 .grid {
   display: grid;
@@ -226,18 +225,6 @@ button {
   font-size: 12px;
 }
 
-#movie-img {
-  display: block;
-  width: 130px;
-  height: 90px;
-  background-image: url("./spirited_away.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-  cursor: pointer;
-}
-
 #movie-img.hidden {
   display: none;
 }
@@ -309,7 +296,7 @@ p {
 
 
 /* Mobile responsive */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .container {
     width: 100%;
   }
@@ -318,13 +305,13 @@ p {
     padding: auto;
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-gap: 5px;
     grid-auto-flow: dense;
     width: 100%;
   }
 
   .tile {
-    width: calc(33.33% - 10px);
+    width: 100%;
   }
 
   .game-info {
@@ -352,16 +339,6 @@ p {
 
   .game-grid {
     display: block;
-  }
-
-  .grid {
-    margin: 0 auto;
-    width: 300px; 
-  }
-
-  .tile {
-    width: 100%;
-    height: auto;
   }
 
   #guess-form-container {

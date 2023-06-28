@@ -28,7 +28,6 @@
     <p><strong>Win Condition:</strong> The game is considered solved when all the tiles are arranged in the correct order.</p>
     <p><strong>Guess the Movie:</strong> After solving the puzzle, you can guess the movie represented by the image. Enter your guess in the input field provided and click "Submit". If your guess is correct, a "Well done!" message will be displayed. Otherwise, you can try again.</p>
     <p><strong>Instructions:</strong> Click the "Instructions" button to display these instructions again.</p>
-    <p><strong>Note:</strong> This game can only be played on a PC.</p>
   </div>
 </div>
 
@@ -41,9 +40,9 @@
     <div id="guess-result"></div>
   </div>
 
-  <div class="container">
+  <!-- <div class="container"> -->
     <div class="game-grid">
-      <ul class="grid" id="grid">
+      <ul class="gridT" id="grid">
         <li class="tile" id="tile1" draggable="true" data-value="0" style="order: 0" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)"></li>
         <li class="tile" id="tile2" draggable="true" data-value="1" style="order: 1" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)"></li>
         <li class="tile" id="tile3" draggable="true" data-value="2" style="order: 2" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)"></li>
@@ -75,8 +74,8 @@
       <img id="movie-img" width="130" height="90" src="./spirited_away.png" alt="Spirited Away">
     </div>
     </div>
-  </div>
+  <!-- </div> -->
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
