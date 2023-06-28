@@ -314,3 +314,8 @@ closeButtons.forEach(function (closeButton) {
 nextButtonsPopup.forEach((button, index) => {
   button.addEventListener('click', showNextPopup);
 });
+
+// Disable horizontal scrolling
+window.addEventListener('scroll', function() {
+  window.scrollTo(0, window.scrollY);
+});
