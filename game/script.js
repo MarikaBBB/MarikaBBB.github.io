@@ -59,6 +59,9 @@ document.getElementById("shuffle-button").addEventListener("click", function() {
   shuffle();
 });
 
+// Add an event listener to the stop button
+document.querySelector(".timer-button").addEventListener("click", stopTimer);
+
 // Set the maximum number of moves
 var maxMoves = 20;
 
