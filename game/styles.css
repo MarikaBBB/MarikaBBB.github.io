@@ -99,6 +99,7 @@ body {
   background-image: url("spirited_away.png");
   background-size: 750px 405px;
   background-repeat: no-repeat;
+  border: 1px solid red;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
@@ -301,11 +302,14 @@ p {
     width: 100%;
   }
 
+  .game-grid {
+    display: block;
+  }
+
   .grid {
     padding: auto;
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5px;
     grid-auto-flow: dense;
     width: 100%;
   }
@@ -335,10 +339,6 @@ p {
     height: 90px;
     width: 75px;
     margin-right: 0;
-  }
-
-  .game-grid {
-    display: block;
   }
 
   #guess-form-container {
