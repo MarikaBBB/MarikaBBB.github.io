@@ -315,7 +315,10 @@ nextButtonsPopup.forEach((button, index) => {
   button.addEventListener('click', showNextPopup);
 });
 
-// Disable horizontal scrolling
-window.addEventListener('scroll', function() {
-  window.scrollTo(0, window.scrollY);
-});
+// // Disable horizontal scrolling
+// window.addEventListener('scroll', function(event) {
+//   if (window.innerWidth < document.documentElement.scrollWidth) {
+//     event.preventDefault();
+//     window.scroll(window.scrollX, 0);
+//   }
+// });
