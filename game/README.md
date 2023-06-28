@@ -6,7 +6,7 @@ This is a web-based puzzle game built using HTML, CSS, and JavaScript. The game 
 To see a live demo of the puzzle game, you can visit this link: https://marikabbb.github.io/game/index.html 
 
 ### How the Puzzle Works
-- To play the Puzzle Game, follow these steps:
+To play the Puzzle Game, follow these steps:
 - Access the game by opening the 'index.html' file in a web browser.
 - The game will start when you press the button "New Game". You will see a grid of shuffled tiles.
 - Click and drag a tile to move it to the correct spot.
@@ -30,7 +30,7 @@ To see a live demo of the puzzle game, you can visit this link: https://marikabb
 
 
 ### Future implementations:
-- Be mobile responsive.
+- Be mobile responsive.(work in progress)
 - Add event touch to play on mobile phone and iPad.
 - Make the game more engaging by adding additional levels with different images and increasing difficulty.
 - Add sound effects.
@@ -50,6 +50,9 @@ During the development of this game, I encountered several challenges and perfor
 5- Closing the game over alert: After clicking "OK" on the game over alert, I noticed that the message did not close as expected. To resolve this, I modified the event listener for the "OK" button to hide the alert after it was clicked. This provided a smoother user experience by dismissing the alert properly.
 
 6- Timer speed on page load: I observed that the timer appeared to run at a normal speed when the page initially loaded, but it became faster after clicking the "New Game" button. Upon investigation, I realized that the timer interval duration needed adjustment. By fine-tuning the interval duration in the ```startTimer()'``` function, I ensured that the timer maintained a consistent speed throughout the game, regardless of when it was started.
+
+7- The challenge was to make it mobile-responsive. It was tricky But, I partially achieved it.
+The challenge arose from the decision to shuffle a single background image instead of uploading and positioning 16 individual images onto the tiles. Breaking down a single image into 16 tiles posed difficulties when resizing the puzzle for smaller screens. The issue arises because the computer interprets the 16 tiles as empty, resulting in their height being set to 0 when using media queries. Therefore, it was difficult to resize the grid and tiles.
 
 ### Debugging Process
 I carefully reviewed the code logic, inspected variables, and setted breakpoints in the IDE. Additionally, I used the google inpector and closely monitored the browser console for any error messages or unexpected behavior.
