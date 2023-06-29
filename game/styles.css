@@ -99,7 +99,7 @@ body {
   background-image: url("spirited_away.png");
   background-size: 750px 405px;
   background-repeat: no-repeat;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }

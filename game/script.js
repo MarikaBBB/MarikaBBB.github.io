@@ -49,7 +49,7 @@ function shuffle() {
 
   // Reset moves count and timer
   document.getElementById("turns").textContent = "0";
-  resetTimer();
+  resetTimer(); 
 }
 
 // Add an event listener to button "New game"
