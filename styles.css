@@ -455,7 +455,10 @@ p {
 /* Styles for the avatar container */
 #avatar-container {
   position: relative;
-  left: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  text-align: center; 
 }
 
  /* Styles for the avatar images */
@@ -877,43 +880,69 @@ animate {
     text-align: center;
     padding: 20px;
   }
-}
 
-/* Mobile Responsive */
-@media screen and (max-width: 480px) {
+  #title-section h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+
   /* Adjust the about section */
   #about-section {
     padding: 10px;
   }
 
-  /* Create a container for the avatar and speech bubble */
-  .avatar-container {
-    display: flex;
-    align-items: flex-start;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
+   /* Adjust the avatar container */
+   #avatar-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* Adjust the width as needed */
+    text-align: center;
   }
 
-  /* Adjust the avatar */
-  #avatar-container {
-    width: 100%; /* Adjust the width of the avatar container */
-  }
-
+  /* Adjust the avatar images */
   #avatar1,
   #avatar2,
   #avatar3 {
-    width: 100%; /* Adjust the width of the avatars */
-    max-width: 150px;
+    width: 100%; /* Adjust the width as needed */
+    height: auto;
+    cursor: pointer;
   }
 
-  /* Adjust speech bubbles */
-  #speech-bubble1,
+  /* Adjust speech bubble 1 */
+  #speech-bubble1 {
+    position: relative;
+    top: 20px;
+    left: 0;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 60%; /* Adjust the width as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Adjust speech bubble 2 */
   #speech-bubble2 {
-    position: static;
-    margin-left: 10px;
-    width: calc(50% - 20px); /* Adjust the width of the speech bubbles */
-    max-width: 150px;
+    position: relative;
+    top: 40px;
+    left: 0;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 80%; /* Adjust the width as needed */
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Adjust text inside speech bubbles */
+  #speech-bubble1 p,
+  #speech-bubble2 p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    color: #08452c;
   }
   
   /* Adjust speech bubble content */
@@ -922,32 +951,21 @@ animate {
     text-align: left;
   }
 
-  /* Adjust the start story button */
-  #start-story-btn {
-    margin: 10px auto;
-    width: 100%;
-    max-width: 150px;
-  }
-
- /* Move the speech bubbles and button */
- #speech-bubble1 {
-  margin-left: 10px;
-  margin-top: 10px;
-  width: calc(50% - 20px); /* Adjust the width to fit two speech bubbles in a row */
-  max-width: 150px;
-}
-
-#speech-bubble2 {
-  margin-top: 10px;
-  width: calc(50% - 20px); /* Adjust the width to fit two speech bubbles in a row */
-  max-width: 150px;
-}
-
-#start-story-btn {
-  margin-top: 10px;
-  width: calc(100% - 20px); /* Adjust the width to fit the button in a row */
-  max-width: 150px;
-}
+    /* Adjust the start story button */
+    #start-story-btn {
+      margin: 10px auto;
+      width: 80%; /* Adjust the width as needed */
+      max-width: 150px;
+    }
+  
+    /* Move the speech bubbles and button */
+    #speech-bubble1,
+    #speech-bubble2,
+    #start-story-btn {
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 }
 
 
