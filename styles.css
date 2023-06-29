@@ -881,6 +881,11 @@ animate {
     padding: 20px;
   }
 
+  h1 {
+    text-align: center;
+    font-size: 36px;
+  }
+
   /* Adjust the about section */
   #about-section {
     padding: 20px 0;
