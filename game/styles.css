@@ -267,12 +267,12 @@ button {
   background-color: #fefefe;
   margin: 10% auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid lightgray;
   max-width: 600px;
 }
 
 .close-button {
-  color: #aaa;
+  color: lightgray;
   float: right;
   font-size: 28px;
   font-weight: bold;
