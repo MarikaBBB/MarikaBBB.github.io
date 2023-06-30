@@ -958,7 +958,7 @@ animate {
   width: 90%; 
   height: auto;
   margin: 0 auto; /* Center the pop-up horizontally */
-  box-sizing: border-box; 
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -966,12 +966,9 @@ animate {
 }
 
 .popup {
-    width: 80%; 
-    height: auto;
-}
-
-.popup h2 {
-  font-size: 1.5rem; 
+  width: 80%; 
+  height: auto;
+  padding-bottom: 60px;
 }
 
 .popup .photo-container {
@@ -983,23 +980,6 @@ animate {
 .popup .photo-container img {
   width: 100%; 
   height: auto;
-}
-
-.popup p.ita {
-  font-size: 0.8rem;
-}
-
-.popup p {
-  font-size: 0.8rem; 
-  margin-bottom: 10px; 
-}
-
-.popup .close {
-  font-size: 1rem; 
-}
-
-.popup .nextButtonsPopup {
-  font-size: 1rem; 
 }
 
  /* Testimonials section styling */
