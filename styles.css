@@ -953,6 +953,55 @@ animate {
     max-width: 150px;
   }
 
+/* Pop-up windows style */
+#popup-container {
+  width: 90%; 
+  height: auto;
+  margin: 0 auto; /* Center the pop-up horizontally */
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.popup {
+    width: 80%; 
+    height: auto;
+}
+
+.popup h2 {
+  font-size: 1.5rem; 
+}
+
+.popup .photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup .photo-container img {
+  width: 100%; 
+  height: auto;
+}
+
+.popup p.ita {
+  font-size: 0.8rem;
+}
+
+.popup p {
+  font-size: 0.8rem; 
+  margin-bottom: 10px; 
+}
+
+.popup .close {
+  font-size: 1rem; 
+}
+
+.popup .nextButtonsPopup {
+  font-size: 1rem; 
+}
+
  /* Testimonials section styling */
 #testimonials {
   padding: 10px;
