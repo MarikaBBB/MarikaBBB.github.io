@@ -4,10 +4,12 @@ function toggleImage() {
   movieImage.classList.toggle("hidden"); // Show or hide the movie image
 }
 
+// Function to start the timer
 function startTimer() {
   timerInterval = setInterval(function () {
     timerSeconds++;
     updateTimer();
+
     // Check if the time limit has been reached
     if (timerSeconds >= 180) { // 3 minutes * 60 seconds = 180 seconds
       stopTimer();
@@ -59,7 +61,7 @@ document.getElementById("shuffle-button").addEventListener("click", function() {
   shuffle();
 });
 
-// Add an event listener to the stop button
+
 document.querySelector(".timer-button").addEventListener("click", stopTimer);
 
 // Set the maximum number of moves
