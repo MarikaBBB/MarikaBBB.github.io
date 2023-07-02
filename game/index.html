@@ -10,12 +10,14 @@
 </head>
 
 <body>
+  <!-- Header -->
   <div class="header">
     <h1 class="title">Ghibli Puzzle:</h1>
     <img class="logo" src="./logo.png" alt="Ghibli Logo">
     <h1 class="title">Magical Sliding Adventures</h1>
   </div>
 
+  <!-- Instructions -->
   <div id="instructions-modal">
   <div class="modal-content">
     <span class="close-button">&times;</span>
@@ -31,6 +33,7 @@
   </div> 
 </div>
 
+<!-- Guess Movie Form -->
   <div id="guess-form-container">
     <form id="guess-form">
       <label for="guess-input">Guess the Movie Title:</label>
@@ -40,7 +43,7 @@
     <div id="guess-result"></div>
   </div>
 
-  <!-- <div class="container"> -->
+ <!-- Game Grid and Info -->
     <div class="game-grid">
       <ul class="grid" id="grid">
         <li class="tile" id="tile1" draggable="true" data-value="0" style="order: 0" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)"></li>
@@ -62,6 +65,7 @@
       </ul>
       
     <div class="game-info">
+      <!-- Buttons and information -->
       <button id="instructions-button">Instructions</button>
       <button class="randomMove" id="shuffle-button" onclick="shuffle();">New Game</button>
       <h2 class="moves">Moves: <span id="turns">0</span></h2>
@@ -73,8 +77,8 @@
       <button id="movie-btn" onclick="toggleImage()">Click for Hint</button>
       <img id="movie-img" width="130" height="90" src="./spirited_away.png" alt="Spirited Away">
     </div>
-    </div>
-  <!-- </div> -->
+    </body>
+
 
 <script src="script.js"></script>
 </body>
