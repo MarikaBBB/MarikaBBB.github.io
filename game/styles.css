@@ -306,25 +306,25 @@ button {
 
   .title {
     font-size: 24px;
-    margin-right: 0;
+    /* margin-right: 0; */
     margin-bottom: 10px;
   }
 
   .logo {
     height: 90px;
     width: 75px;
-    margin-right: 0;
+    /* margin-right: 0; */
   }
 
   #guess-form-container {
     padding: 0;
-    width: 300px; 
+    /* width: 300px;  */
     margin-left: auto;
     margin-right: auto;
   }
 
   #guess-form {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
@@ -337,12 +337,12 @@ button {
   #guess-form input[type="text"],
   #guess-form button[type="submit"] {
     width: 100%;
-    max-width: 300px; /* Limit the maximum width of the input and button */
+    /* max-width: 300px; Limit the maximum width of the input and button */
   }
   
   #guess-result {
     margin-left: 10px;
-    margin-top: 10px; 
+    /* margin-top: 10px;  */
   }
 
   .game-info {
@@ -358,7 +358,7 @@ button {
   }
 
   .grid {
-    padding: auto;
+    /* padding: auto; */
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-flow: dense;
@@ -375,10 +375,10 @@ button {
     margin-right: 0;
   }
 
-  .moves,
+  /* .moves,
   .timer {
     font-size: 14px;
-  }
+  } */
 
   .timer-button {
     font-size: 12px;
