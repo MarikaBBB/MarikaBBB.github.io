@@ -128,8 +128,8 @@ p {
 }
 
 .tile {
-  width: 187.5px; /* 750px divided by 4 */
-  height: 101.25px; /* 405px divided by 4 */
+  width: 187.5px; /*750px divided by 4 */
+  height: 101.25px; /*405px divided by 4 */
   background-image: url("spirited_away.png");
   background-size: 750px 405px;
   background-repeat: no-repeat;

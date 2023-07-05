@@ -1,12 +1,33 @@
-# WEBSITE PROJECT
+### Repository Transition
+
+This repository was previously used to store multiple projects in a single repository. However, due to F&C requirements, I have made the decision to create separate repositories for each project. 
+
+# Repository Structure
+The new structure of the repositories is as follows:
+
+Project 1: https://github.com/MarikaBBB/hobby-page 
+Project 2: https://github.com/MarikaBBB/gallery-project 
+Project 3: https://github.com/MarikaBBB/movie-database 
+Project 4: https://github.com/MarikaBBB/game 
+Project 5: https://github.com/MarikaBBB/webiste 
+
+Each project now has its own dedicated repository, which contains all the relevant files.
+
+# Commit History
+To preserve the commit history and development progress of all the projects, I have chosen not to fork the original repository into individual repositories. Instead, the original repository with multiple projects remains public and accessible. By referring to the commit history of the original repository, you can track the development and changes made to each project over time.
+
+
+
+### WEBSITE PROJECT
 
 Welcome to my Founders & Coders Portfolio! This is a web page created by me, Marika Bertelli, to showcase my skills, projects, and learning journey. This portfolio serves as a playground for me to explore and demonstrate my knowledge of web development concepts. At the same time, the website is designed to allow visitors to learn more about me.
 
 ### Usage
 
-To view my portfolio, simply open the 'index.html' file in a web browser. The portfolio is responsive and can be accessed on different devices and screen sizes (work in progress).  
+To view my portfolio, simply visit the GitHub page: https://marikabbb.github.io . 
+The portfolio is responsive and can be accessed on different devices and screen sizes (work in progress).  
 
-To view thel ive site, visit the GitHub page: https://marikabbb.github.io  
+ 
 
 ### Overview
 
