@@ -306,13 +306,19 @@ function isMobileDevice() {
   return /Mobi|Android/i.test(navigator.userAgent);
 }
 
-// Add a click event listener to the speech bubble for mobile devices
+// Add touch event listener to the speech bubble for mobile devices
 if (isMobileDevice()) {
-  var speechBubble1 = document.getElementById('speech-bubble1');
+  const speechBubble1 = document.getElementById('speech-bubble1');
+  
+  speechBubble1.addEventListener('touchstart', function(event) {
+    event.preventDefault(); // Prevents touch event from triggering default browser behavior
+    animateAvatar();
+  });
+
   speechBubble1.addEventListener('click', function() { 
-    var avatar1 = document.getElementById('avatar1');
-    var avatar2 = document.getElementById('avatar2');
-    var avatar3 = document.getElementById('avatar3');
+    const avatar1 = document.getElementById('avatar1');
+    const avatar2 = document.getElementById('avatar2');
+    const avatar3 = document.getElementById('avatar3');
 
     avatar1.classList.add('hidden');
     avatar2.classList.add('hidden');
@@ -320,11 +326,11 @@ if (isMobileDevice()) {
     setTimeout(function() {
       avatar2.classList.remove('hidden'); 
       avatar3.classList.add('hidden'); 
-    }, 500);
+    }, 800);
 
     setTimeout(function() {
       avatar2.classList.add('hidden'); 
       avatar3.classList.remove('hidden');
-    }, 1000); 
+    }, 1600); 
   });
 }

@@ -908,6 +908,10 @@ animate {
     cursor: pointer;
   }
 
+  #avatar-container {
+    position: relative; 
+  }
+
   /* Adjust speech bubble 1 */
   #speech-bubble1 {
     position: relative;
