@@ -9,12 +9,9 @@ The new structure of the repositories is as follows:
 - Project 2: https://github.com/MarikaBBB/gallery-project 
 - Project 3: https://github.com/MarikaBBB/movie-database 
 - Project 4: https://github.com/MarikaBBB/game 
-- Project 5: https://github.com/MarikaBBB/webiste 
+- Project 5: https://github.com/MarikaBBB/website
 
 Each project now has its own dedicated repository, which contains all the relevant files.
-
-### Commit History
-To preserve the commit history and development progress of all the projects, I have chosen not to fork the original repository into individual repositories. Instead, the original repository with multiple projects remains public and accessible. By referring to the commit history of the original repository, you can track the development and changes made to each project over time.
 
 
 
