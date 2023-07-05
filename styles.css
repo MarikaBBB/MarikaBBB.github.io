@@ -895,18 +895,18 @@ animate {
   #avatar-container {
     margin-left: auto;
     margin-right: auto;
-    width: 80%; /* Adjust the width as needed */
+    width: 80%; 
     text-align: center;
   }
 
-  #avatar-container img {
+  /* #avatar-container img {
     position: relative;
     top: auto;
     left: auto;
     display: block;
     width: 100%;
     height: auto;
-  }
+  } */
 
   /* Adjust the avatar images */
   #avatar1,
