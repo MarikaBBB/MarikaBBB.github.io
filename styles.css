@@ -919,6 +919,14 @@ animate {
     width: 60%; 
   }
 
+  .clickable {
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
   /* Adjust speech bubble 2 */
   #speech-bubble2 {
     position: relative;

@@ -301,24 +301,26 @@ flagIcons.forEach(function(flagIcon) {
   });
 });
 
+// Check if the current device is a mobile phone
+function isMobileDevice() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
 
-// Add event listeners to close buttons in pop-up windows
-closeButtons.forEach(function (closeButton) {
-  closeButton.addEventListener('click', function () {
-    const popup = this.parentNode;
-    hidePopup(Array.from(popups).indexOf(popup)); // Close the current pop-up window
+// Add a click event listener to the speech bubble for mobile devices
+if (isMobileDevice()) {
+  var speechBubble1 = document.getElementById('speech-bubble1');
+  speechBubble1.addEventListener('touchstart', function() {
+   
+    var avatar1 = document.getElementById('avatar1');
+    var avatar2 = document.getElementById('avatar2');
+    var avatar3 = document.getElementById('avatar3');
+    
+    avatar1.classList.add('hidden');
+    avatar2.classList.remove('hidden');
+    
+    setTimeout(function() {
+      avatar2.classList.add('hidden');
+      avatar3.classList.remove('hidden');
+    }, 500);
   });
-});
-
-// Add event listeners to the pop-up next buttons
-nextButtonsPopup.forEach((button, index) => {
-  button.addEventListener('click', showNextPopup);
-});
-
-// // Disable horizontal scrolling
-// window.addEventListener('scroll', function(event) {
-//   if (window.innerWidth < document.documentElement.scrollWidth) {
-//     event.preventDefault();
-//     window.scroll(window.scrollX, 0);
-//   }
-// });
+}
