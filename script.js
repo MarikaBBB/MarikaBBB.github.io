@@ -309,18 +309,22 @@ function isMobileDevice() {
 // Add a click event listener to the speech bubble for mobile devices
 if (isMobileDevice()) {
   var speechBubble1 = document.getElementById('speech-bubble1');
-  speechBubble1.addEventListener('touchstart', function() {
-   
+  speechBubble1.addEventListener('click', function() { 
     var avatar1 = document.getElementById('avatar1');
     var avatar2 = document.getElementById('avatar2');
     var avatar3 = document.getElementById('avatar3');
-    
+
     avatar1.classList.add('hidden');
-    avatar2.classList.remove('hidden');
-    
+    avatar2.classList.add('hidden');
+
     setTimeout(function() {
-      avatar2.classList.add('hidden');
-      avatar3.classList.remove('hidden');
+      avatar2.classList.remove('hidden'); 
+      avatar3.classList.add('hidden'); 
     }, 500);
+
+    setTimeout(function() {
+      avatar2.classList.add('hidden'); 
+      avatar3.classList.remove('hidden');
+    }, 1000); 
   });
 }
