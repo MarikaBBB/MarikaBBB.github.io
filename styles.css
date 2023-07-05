@@ -897,7 +897,15 @@ animate {
     margin-right: auto;
     width: 80%; /* Adjust the width as needed */
     text-align: center;
-    position: relative; 
+  }
+
+  #avatar-container img {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   /* Adjust the avatar images */
@@ -907,45 +915,6 @@ animate {
     width: 100%; /* Adjust the width as needed */
     height: auto;
     cursor: pointer;
-    animation-name: moveAvatar;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes leg-animation {
-    0% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-10px);
-    }
-    50% {
-      transform: translateX(0);
-    }
-    75% {
-      transform: translateX(10px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes hand-animation {
-    0% {
-      transform: translateY(0);
-    }
-    25% {
-      transform: translateY(-10px);
-    }
-    50% {
-      transform: translateY(0);
-    }
-    75% {
-      transform: translateY(10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
   }
 
   /* Adjust speech bubble 1 */
