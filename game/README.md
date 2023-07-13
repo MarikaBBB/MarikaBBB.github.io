@@ -1,6 +1,12 @@
 # PUZZLE GAME
 This is a web-based puzzle game built using HTML, CSS, and JavaScript. The game is inspired by japanese anime characters, and it features an image from Studio Ghibli as the puzzle background. The goal of the game is to arrange the tiles in the correct order within a specified number of moves or within a time limit.
 
+# Why I Created This Game
+
+I created this game as a way to recreate a cherished childhood memory. Playing puzzles with my grandfather holds a special place in my heart, and I wanted to capture the joy and nostalgia of those moments through this game. It's my way of bringing those puzzle-solving adventures to life once again.
+
+Inspired by my recent visit to the Ghibli museum in Tokyo, I chose to share my passion for anime by incorporating an image from one of Miyazaki's most famous movies.
+
 
 ## Game Preview
 To see a live demo of the puzzle game, you can visit this link: https://marikabbb.github.io/game/index.html 
